@@ -21,3 +21,25 @@
 <script src="{{asset('js/Backend/dashboard.js')}}"></script>
 <script src="{{asset('js/Backend/b')}}"></script>
 <!-- AdminLTE for demo purposes -->
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('desc');
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script>
+    @if(\Illuminate\Support\Facades\Session::has('success'))
+    toastr.success("{{\Illuminate\Support\Facades\Session::get('success')}}");
+    @endif
+    @if(\Illuminate\Support\Facades\Session::has('error'))
+    toastr.error("{{\Illuminate\Support\Facades\Session::get('error')}}");
+    @endif
+    @if ($errors->any())
+    @foreach($errors->all() as $error)
+    toastr.warning("{{ $error }}");
+    @endforeach
+    @endif
+
+
+</script>

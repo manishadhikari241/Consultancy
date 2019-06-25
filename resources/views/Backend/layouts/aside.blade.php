@@ -214,6 +214,11 @@
                         <i class="nav-icon fa fa-calendar"></i>
                         <p>
                             Setting
+                    <a href="{{route('course')}}" class="nav-link">
+                        <i class="nav-icon fa fa-book"></i>
+                        <p>
+                            Course
+                            <span class="badge badge-info right">2</span>
                         </p>
                     </a>
                 </li>

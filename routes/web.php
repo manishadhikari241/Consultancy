@@ -33,6 +33,14 @@ Route::group(['namespace' => 'Backend'], function () {
         Route::any('setting-page', 'SettingController@setting_page')->name('setting-page');
 
     });
+
+    Route::group(['prefix' => 'Course'], function () {
+        Route::any('/courses', 'CourseController@add_course')->name('course');
+
+
+    });
+
+
 });
 
 
