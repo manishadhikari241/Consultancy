@@ -3,14 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="464708a4-9495-46cd-a9e7-baf8c1cba44a" name="Default" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/layouts/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/layouts/aside.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Backend/pages/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Backend/pages/dashboard.blade.php" afterDir="false" />
 =======
+=======
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/Frontend/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/Frontend/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Frontend/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Frontend/layouts/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Frontend/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Frontend/layouts/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Frontend/pages/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Frontend/pages/index.blade.php" afterDir="false" />
+<<<<<<< HEAD
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
+=======
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -94,6 +100,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+<<<<<<< HEAD
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
+=======
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
             </state>
           </provider>
@@ -173,6 +182,9 @@
         <option value="$PROJECT_DIR$/resources/views/Frontend/pages/course_single.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Frontend/CourseController.php" />
         <option value="$PROJECT_DIR$/resources/views/Frontend/pages/contact.blade.php" />
+<<<<<<< HEAD
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
+=======
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
         <option value="$PROJECT_DIR$/public/css/Frontend/style.css" />
         <option value="$PROJECT_DIR$/resources/views/Frontend/layouts/footer.blade.php" />
@@ -182,12 +194,16 @@
         <option value="$PROJECT_DIR$/public/css/Frontend/login.css" />
         <option value="$PROJECT_DIR$/resources/views/Frontend/layouts/header.blade.php" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/views/Backend/pages/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Backend/layouts/aside.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/Backend/pages/setting.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/SiteController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
+=======
+        <option value="$PROJECT_DIR$/resources/views/Frontend/pages/index.blade.php" />
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
 =======
         <option value="$PROJECT_DIR$/resources/views/Frontend/pages/index.blade.php" />
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
@@ -336,6 +352,7 @@
               <item name="tender" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="consultancy" type="b2602c69:ProjectViewProjectNode" />
@@ -393,6 +410,8 @@
               <item name="consultancy" type="b2602c69:ProjectViewProjectNode" />
               <item name="consultancy" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
             </path>
           </expand>
           <select />
@@ -458,7 +477,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="20286000" />
+=======
+    <option name="totallyTimeSpent" value="25507000" />
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
 =======
     <option name="totallyTimeSpent" value="25507000" />
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
@@ -468,15 +491,21 @@
     <editor active="true" />
     <layout>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2344932" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" weight="0.32843137" />
 =======
+=======
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23157895" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="19" side_tool="true" />
+<<<<<<< HEAD
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
+=======
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
       <window_info anchor="right" id="Database" order="3" weight="0.32955465" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
@@ -484,7 +513,11 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" weight="0.44607842" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.4471831" />
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
 =======
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.4471831" />
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
@@ -519,6 +552,7 @@
   </component>
   <component name="editorHistoryManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/public/css/Frontend/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16422">
@@ -547,6 +581,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
 =======
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
     <entry file="file://$PROJECT_DIR$/public/css/Frontend/style.css">
@@ -826,6 +862,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/pages/about.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="81" selection-start-line="3" selection-start-column="81" selection-end-line="3" selection-end-column="81" />
+          <folding>
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/pages/courses.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="261" column="11" selection-start-line="261" selection-start-column="11" selection-end-line="261" selection-end-column="11" />
+          <folding>
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/pages/course_single.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="269" column="11" selection-start-line="269" selection-start-column="11" selection-end-line="269" selection-end-column="11" />
+          <folding>
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Frontend/CourseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/pages/contact.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#1;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Frontend/PageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -844,12 +948,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="436">
           <caret line="10024" column="48" selection-start-line="10024" selection-start-column="48" selection-end-line="10024" selection-end-column="48" />
+<<<<<<< HEAD
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
+=======
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/Frontend/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="561">
           <caret line="557" selection-start-line="557" selection-end-line="557" />
@@ -893,11 +1001,30 @@
 <<<<<<< HEAD
         <state relative-caret-position="1139">
           <caret line="358" column="8" selection-start-line="358" selection-start-column="8" selection-end-line="358" selection-end-column="8" />
+=======
+        <state relative-caret-position="262">
+          <caret line="369" column="17" lean-forward="true" selection-start-line="369" selection-start-column="17" selection-end-line="369" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/pages/login.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2040">
+          <caret line="120" column="15" selection-start-line="120" selection-start-column="15" selection-end-line="120" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/layouts/footer.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="170">
           <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
         </state>
@@ -933,6 +1060,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/Frontend/pages/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
+=======
+        <state relative-caret-position="268">
+          <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Frontend/pages/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
         <state relative-caret-position="62">
           <caret line="314" lean-forward="true" selection-start-line="314" selection-end-line="314" />
           <folding>
@@ -941,6 +1077,9 @@
             <element signature="e#8243#16862#0#HTML" />
             <element signature="e#16907#17405#0#HTML" />
           </folding>
+<<<<<<< HEAD
+>>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
+=======
 >>>>>>> 7a2a239216037fd0ad01808e92c528b9d4b31bfe
         </state>
       </provider>
