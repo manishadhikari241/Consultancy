@@ -29,6 +29,16 @@ Route::group(['namespace' => 'Frontend'], function () {
 Route::group(['namespace' => 'Backend'], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
+
+    Route::group(['prefix'=>'Course'], function () {
+        Route::any('/courses', 'CourseController@add_course')->name('course');
+
+
+
+
+    });
+
+
 });
 
 

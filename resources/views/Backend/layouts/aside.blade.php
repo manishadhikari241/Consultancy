@@ -210,10 +210,10 @@
                 </li>
                 <li class="nav-header">EXAMPLES</li>
                 <li class="nav-item">
-                    <a href="pages/calendar.html" class="nav-link">
-                        <i class="nav-icon fa fa-calendar"></i>
+                    <a href="{{route('course')}}" class="nav-link">
+                        <i class="nav-icon fa fa-book"></i>
                         <p>
-                            Calendar
+                            Course
                             <span class="badge badge-info right">2</span>
                         </p>
                     </a>
