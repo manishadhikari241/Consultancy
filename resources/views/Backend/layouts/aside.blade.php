@@ -210,11 +210,10 @@
                 </li>
                 <li class="nav-header">EXAMPLES</li>
                 <li class="nav-item">
-                    <a href="pages/calendar.html" class="nav-link">
+                    <a href="{{route('setting-page')}}" class="nav-link">
                         <i class="nav-icon fa fa-calendar"></i>
                         <p>
-                            Calendar
-                            <span class="badge badge-info right">2</span>
+                            Setting
                         </p>
                     </a>
                 </li>

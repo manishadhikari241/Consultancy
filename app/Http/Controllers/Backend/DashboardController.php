@@ -9,6 +9,7 @@ class DashboardController extends BackendController
 {
     public function index()
     {
-        return view($this->backendPagePath . 'dashboard');
+        $this->data('title', $this->setTitle('Dashboard'));
+        return view($this->backendPagePath . 'dashboard',$this->data);
     }
 }

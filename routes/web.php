@@ -29,6 +29,10 @@ Route::group(['namespace' => 'Frontend'], function () {
 Route::group(['namespace' => 'Backend'], function () {
     Route::get('dashboard', 'DashboardController@index')->name('dashboard');
 
+    Route::group(['prefix' => 'Setting'], function () {
+        Route::any('setting-page', 'SettingController@setting_page')->name('setting-page');
+
+    });
 });
 
 
