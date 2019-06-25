@@ -1,4 +1,7 @@
 <!-- header -->
+@php
+    $route= Illuminate\Support\Facades\Route::currentRouteName();
+@endphp
 <header class="fixed-top header">
     <!-- top header -->
     <div class="top-header py-2 bg-white">
@@ -9,16 +12,16 @@
                     <ul class="list-inline">
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                                    href="notice.html">notice</a></li>
+                                    href="notice.html">Visas</a></li>
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                                    href="research.html">research</a></li>
+                                    href="research.html">courses</a></li>
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                                    href="scholarship.html">SCHOLARSHIP</a></li>
+                                    href="{{route('contact')}}">contact</a></li>
                         <li class="list-inline-item"><a
-                                    class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#"
-                                    data-toggle="modal" data-target="#loginModal">login</a></li>
+                                    class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('login')}}"
+                                   >login</a></li>
 
                     </ul>
                 </div>
@@ -42,7 +45,9 @@
     <div class="navigation w-100">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/logo.png')}}" alt="logo"></a>
+                {{--<a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/logo.png')}}"--}}
+                {{--alt="logo"></a>--}}
+                <a href="">COMPANY NAME</a>
                 <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -50,41 +55,34 @@
 
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto text-center">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home</a>
+                        <li class="nav-item @if($route=='index') active @endif ">
+                            <a class="nav-link" href="{{route('index')}}">Home</a>
                         </li>
-                        <li class="nav-item @@about">
-                            <a class="nav-link" href="about.html">About</a>
+                        <li class="nav-item @if($route=='about') active @endif  @@about">
+                            <a class="nav-link" href="{{route('about')}}">About</a>
                         </li>
-                        <li class="nav-item @@courses">
-                            <a class="nav-link" href="courses.html">COURSES</a>
-                        </li>
-                        <li class="nav-item @@events">
-                            <a class="nav-link" href="events.html">EVENTS</a>
-                        </li>
-                        <li class="nav-item @@blog">
-                            <a class="nav-link" href="blog.html">BLOG</a>
+                        <li class="nav-item @if($route=='courses') active @endif @@courses">
+                            <a class="nav-link" href="{{route('courses')}}">COURSES</a>
                         </li>
                         <li class="nav-item dropdown view">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
-                                Pages
+                                Visas
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="teacher.html">Teacher</a>
-                                <a class="dropdown-item" href="teacher-single.html">Teacher Single</a>
+                                <a class="dropdown-item" href="teacher.html">Student Visa</a>
+                                <a class="dropdown-item" href="teacher-single.html">Working Visa</a>
                                 <a class="dropdown-item" href="notice.html">Notice</a>
-                                <a class="dropdown-item" href="notice-single.html">Notice Details</a>
-                                <a class="dropdown-item" href="research.html">Research</a>
-                                <a class="dropdown-item" href="scholarship.html">Scholarship</a>
-                                <a class="dropdown-item" href="course-single.html">Course Details</a>
-                                <a class="dropdown-item" href="event-single.html">Event Details</a>
-                                <a class="dropdown-item" href="blog-single.html">Blog Details</a>
+
                             </div>
                         </li>
-                        <li class="nav-item @@contact">
-                            <a class="nav-link" href="contact.html">CONTACT</a>
+                        <li class="nav-item @@blog">
+                            <a class="nav-link" href="blog.html">BLOG</a>
+                        </li>
+
+                        <li class="nav-item @if($route=='contact') active @endif @@contact">
+                            <a class="nav-link" href="{{route('contact')}}">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -93,30 +91,3 @@
     </div>
 </header>
 <!-- /header -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content rounded-0 border-0 p-4">
-            <div class="modal-header border-0">
-                <h3>Login</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="#" class="row">
-
-                    <div class="col-12">
-                        <input type="email" class="form-control mb-3" id="loginName" name="loginName" placeholder="Email">
-                    </div>
-                    <div class="col-12">
-                        <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword"
-                               placeholder="Password">
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">LOGIN</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
