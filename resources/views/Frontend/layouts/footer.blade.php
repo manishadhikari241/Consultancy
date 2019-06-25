@@ -17,6 +17,8 @@
                         <li class="mb-2">contact@yourdomain.com</li>
                     </ul>
                 </div>
+                <div class="col-lg-6 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                </div>
                 <!-- company -->
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
                     <h4 class="text-white mb-5">COMPANY</h4>
@@ -28,35 +30,9 @@
                     </ul>
                 </div>
                 <!-- links -->
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                    <h4 class="text-white mb-5">LINKS</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="courses.html">Courses</a></li>
-                        <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
-                        <li class="mb-3"><a class="text-color" href="gallary.html">Gallary</a></li>
-                        <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
-                    </ul>
-                </div>
+
                 <!-- support -->
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                    <h4 class="text-white mb-5">SUPPORT</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
-                        <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
-                        <li class="mb-3"><a class="text-color" href="#">Language</a></li>
-                        <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>
-                    </ul>
-                </div>
-                <!-- support -->
-                <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                    <h4 class="text-white mb-5">RECOMMEND</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="#">WordPress</a></li>
-                        <li class="mb-3"><a class="text-color" href="#">LearnPress</a></li>
-                        <li class="mb-3"><a class="text-color" href="#">WooCommerce</a></li>
-                        <li class="mb-3"><a class="text-color" href="#">bbPress</a></li>
-                    </ul>
-                </div>
+
             </div>
         </div>
     </div>

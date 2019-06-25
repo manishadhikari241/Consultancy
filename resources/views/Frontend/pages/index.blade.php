@@ -17,7 +17,7 @@
                                 tempor
                                 incididunt ut labore et
                                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-                            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight"
+                            <a href="contact.blade.php" class="btn btn-primary" data-animation-out="fadeOutRight"
                                data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply
                                 now</a>
                         </div>
@@ -35,7 +35,7 @@
                                 tempor
                                 incididunt ut labore et
                                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-                            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5"
+                            <a href="contact.blade.php" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5"
                                data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                                 tempor
                                 incididunt ut labore et
                                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exer</p>
-                            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown"
+                            <a href="contact.blade.php" class="btn btn-primary" data-animation-out="fadeOutDown"
                                data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply
                                 now</a>
                         </div>
@@ -119,7 +119,7 @@
                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat </p>
                     <p>cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
                         perspiciatis unde omnis iste natus error sit voluptatem</p>
-                    <a href="about.html" class="btn btn-primary-outline">Learn more</a>
+                    <a href="about.blade.php" class="btn btn-primary-outline">Learn more</a>
                 </div>
                 <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
                     <img class="img-fluid w-100" src="images/about/about-us.jpg" alt="about image">
@@ -138,7 +138,7 @@
                         <h2 class="mb-0 text-nowrap mr-3">Our Course</h2>
                         <div class="border-top w-100 border-primary d-none d-sm-block"></div>
                         <div>
-                            <a href="courses.html" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
+                            <a href="courses.blade.php" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
                                 all</a>
                         </div>
                     </div>
@@ -155,13 +155,13 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
                                 <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
                             </ul>
-                            <a href="course-single.html">
+                            <a href="course_single.blade.php">
                                 <h4 class="card-title">Photography</h4>
                             </a>
                             <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                            <a href="course_single.blade.php" class="btn btn-primary btn-sm">Apply now</a>
                         </div>
                     </div>
                 </div>
@@ -174,13 +174,13 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
                                 <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
                             </ul>
-                            <a href="course-single.html">
+                            <a href="course_single.blade.php">
                                 <h4 class="card-title">Programming</h4>
                             </a>
                             <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                            <a href="course_single.blade.php" class="btn btn-primary btn-sm">Apply now</a>
                         </div>
                     </div>
                 </div>
@@ -193,13 +193,13 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
                                 <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
                             </ul>
-                            <a href="course-single.html">
+                            <a href="course_single.blade.php">
                                 <h4 class="card-title">Lifestyle Archives</h4>
                             </a>
                             <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                            <a href="course_single.blade.php" class="btn btn-primary btn-sm">Apply now</a>
                         </div>
                     </div>
                 </div>
@@ -212,13 +212,13 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
                                 <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
                             </ul>
-                            <a href="course-single.html">
+                            <a href="course_single.blade.php">
                                 <h4 class="card-title">Complete Freelancing</h4>
                             </a>
                             <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                            <a href="course_single.blade.php" class="btn btn-primary btn-sm">Apply now</a>
                         </div>
                     </div>
                 </div>
@@ -231,13 +231,13 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
                                 <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
                             </ul>
-                            <a href="course-single.html">
+                            <a href="course_single.blade.php">
                                 <h4 class="card-title">Branding Design</h4>
                             </a>
                             <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                            <a href="course_single.blade.php" class="btn btn-primary btn-sm">Apply now</a>
                         </div>
                     </div>
                 </div>
@@ -250,13 +250,13 @@
                                 <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
                                 <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>
                             </ul>
-                            <a href="course-single.html">
+                            <a href="course_single.blade.php">
                                 <h4 class="card-title">Art Design</h4>
                             </a>
                             <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                 eiusmod tempor
                                 incididunt ut labore et dolore magna.</p>
-                            <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>
+                            <a href="course_single.blade.php" class="btn btn-primary btn-sm">Apply now</a>
                         </div>
                     </div>
                 </div>
@@ -265,7 +265,7 @@
             <!-- mobile see all button -->
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="courses.html" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">sell all</a>
+                    <a href="courses.blade.php" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">sell all</a>
                 </div>
             </div>
         </div>
@@ -279,7 +279,7 @@
                 <div class="col-12 text-center">
                     <h6 class="text-white font-secondary mb-0">Click to Join the Advance Workshop</h6>
                     <h2 class="section-title text-white">Training In Advannce Networking</h2>
-                    <a href="contact.html" class="btn btn-secondary">join now</a>
+                    <a href="contact.blade.php" class="btn btn-secondary">join now</a>
                 </div>
             </div>
         </div>
@@ -312,77 +312,7 @@
     </section>
     <!-- /success story -->
 
-    <!-- events -->
-    <section class="section bg-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex align-items-center section-title justify-content-between">
-                        <h2 class="mb-0 text-nowrap mr-3">Upcoming Events</h2>
-                        <div class="border-top w-100 border-primary d-none d-sm-block"></div>
-                        <div>
-                            <a href="events.html" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see
-                                all</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <!-- event -->
-                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                    <div class="card border-0 rounded-0 hover-shadow">
-                        <div class="card-img position-relative">
-                            <img class="card-img-top rounded-0" src="images/events/event-1.jpg" alt="event thumb">
-                            <div class="card-date"><span>18</span><br>December</div>
-                        </div>
-                        <div class="card-body">
-                            <!-- location -->
-                            <p><i class="ti-location-pin text-primary mr-2"></i>Harvard, Usa</p>
-                            <a href="event-single.html"><h4 class="card-title">Toward a public philosophy of justice</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- event -->
-                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                    <div class="card border-0 rounded-0 hover-shadow">
-                        <div class="card-img position-relative">
-                            <img class="card-img-top rounded-0" src="images/events/event-2.jpg" alt="event thumb">
-                            <div class="card-date"><span>21</span><br>December</div>
-                        </div>
-                        <div class="card-body">
-                            <!-- location -->
-                            <p><i class="ti-location-pin text-primary mr-2"></i>Cambridge, USA</p>
-                            <a href="event-single.html"><h4 class="card-title">Research seminar in clinical science.</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- event -->
-                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                    <div class="card border-0 rounded-0 hover-shadow">
-                        <div class="card-img position-relative">
-                            <img class="card-img-top rounded-0" src="images/events/event-3.jpg" alt="event thumb">
-                            <div class="card-date"><span>23</span><br>December</div>
-                        </div>
-                        <div class="card-body">
-                            <!-- location -->
-                            <p><i class="ti-location-pin text-primary mr-2"></i>Dhanmondi Lake, Dhaka</p>
-                            <a href="event-single.html"><h4 class="card-title">Firefly training in trauma-informed yoga</h4>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- mobile see all button -->
-            <div class="row">
-                <div class="col-12 text-center">
-                    <a href="course.html" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">sell all</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /events -->
+
 
     <!-- teachers -->
     <section class="section">
