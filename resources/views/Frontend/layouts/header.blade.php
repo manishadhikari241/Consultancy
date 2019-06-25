@@ -23,7 +23,7 @@
                     </ul>
                 </div>
                 <div class="col-lg-4 text-center text-lg-right">
-                    <a class="text-color mr-3" href="callto:+443003030266"><strong>CALL</strong> +44 300 303 0266</a>
+                    <a class="text-color mr-3" href="callto:+443003030266"><strong>CONTACT</strong> +44 300 303 0266</a>
                     <ul class="list-inline d-inline">
                         <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
                                         class="fa fa-facebook"></i></a></li>
