@@ -209,11 +209,8 @@
                     </ul>
                 </li>
                 <li class="nav-header">EXAMPLES</li>
+
                 <li class="nav-item">
-                    <a href="{{route('setting-page')}}" class="nav-link">
-                        <i class="nav-icon fa fa-calendar"></i>
-                        <p>
-                            Setting
                     <a href="{{route('course')}}" class="nav-link">
                         <i class="nav-icon fa fa-book"></i>
                         <p>
@@ -221,6 +218,15 @@
                             <span class="badge badge-info right">2</span>
                         </p>
                     </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('setting-page')}}" class="nav-link">
+                        <i class="nav-icon fa fa-calendar"></i>
+                        <p>
+                            Setting
+                        </p></a>
+
                 </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
@@ -249,6 +255,7 @@
                                 <p>Read</p>
                             </a>
                         </li>
+
                     </ul>
                 </li>
                 <li class="nav-item has-treeview">
