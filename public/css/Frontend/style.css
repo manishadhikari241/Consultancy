@@ -566,7 +566,7 @@ textarea.form-control {
 }
 
 .nav-bg {
-    background-color: #1a1a37;
+    background-color: floralwhite;
     margin-top: -46px;
 }
 
@@ -767,7 +767,7 @@ link:focus,
 }
 
 .hero-slider .slick-dots li.slick-active button {
-    background: #ffbc3b;
+    background: #310068;
 }
 
 .hero-slider .slick-dots li button {

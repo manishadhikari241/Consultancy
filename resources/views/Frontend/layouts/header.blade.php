@@ -10,9 +10,7 @@
 
                 <div class="col-lg-8 text-center text-lg-left">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a
-                                    class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                                    href="notice.html">Visas</a></li>
+
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
                                     href="research.html">courses</a></li>
@@ -20,21 +18,32 @@
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
                                     href="{{route('contact')}}">contact</a></li>
                         <li class="list-inline-item"><a
-                                    class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{{route('login')}}"
-                                   >login</a></li>
+                                    class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
+                                    href="{{route('contact')}}">Gallery</a></li>
+                        <li class="list-inline-item"><a
+                                    class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
+                                    href="{{route('login')}}"
+                            >login</a></li>
 
                     </ul>
                 </div>
                 <div class="col-lg-4 text-center text-lg-right">
-                    <a class="text-color mr-3" href="callto:+443003030266"><strong>CONTACT</strong> +44 300 303 0266</a>
+
+                    <a class="text-color mr-3"
+                       href="callto:+{{getConfiguration('contact_no')}}"><strong>CONTACT</strong>
+                        : {{getConfiguration('contact_no')}}</a>
                     <ul class="list-inline d-inline">
-                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
+                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" target="_blank"
+                                                             href="{{getConfiguration('facebook_link')}}"><i
                                         class="fa fa-facebook"></i></a></li>
-                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
+                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" target="_blank"
+                                                             href="{{getConfiguration('twitter_link')}}"><i
                                         class="fa fa-twitter"></i></a></li>
-                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
-                                        class="fa fa-linkedin"></i></a></li>
-                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i
+                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" target="_blank"
+                                                             href="{{getConfiguration('googleplus_link')}}"><i
+                                        class="fa fa-google-plus"></i></a></li>
+                        <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" target="_blank"
+                                                             href="{{getConfiguration('instagram_link')}}"><i
                                         class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
@@ -45,9 +54,8 @@
     <div class="navigation w-100">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light p-0">
-                {{--<a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/logo.png')}}"--}}
+                <a class="navbar-brand" href="{{route('index')}}"><img src="{{asset('images/gallery/logo-1.png')}}" height="68px" width="200px"></a>
                 {{--alt="logo"></a>--}}
-                <a href="">COMPANY NAME</a>
                 <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
                         aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -78,7 +86,7 @@
                             </div>
                         </li>
                         <li class="nav-item @@blog">
-                            <a class="nav-link" href="blog.html">BLOG</a>
+                            <a class="nav-link" href="blog.html">Testimonial</a>
                         </li>
 
                         <li class="nav-item @if($route=='contact') active @endif @@contact">

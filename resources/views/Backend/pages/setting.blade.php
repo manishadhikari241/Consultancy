@@ -1,6 +1,6 @@
 @extends('Backend.master.master')
 @section('content')
-    <form action="" method="post">
+    <form action="{{route('setting-page')}}" method="post" enctype="multipart/form-data">
         @csrf
         <br>
         <div class="container-fluid">
@@ -30,23 +30,21 @@
                             <div id="navbar-example">
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs" role="tablist">
+
                                     <li class="nav-item">
-                                        <a class="nav-link active" data-toggle="tab" href="#attributes"
-                                           role="tab">Rates and Charges</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Site
+                                        <a class="nav-link " data-toggle="tab" href="#profile" role="tab">Site
                                             Setting</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#home"
-                                           role="tab">Home</a>
-                                    </li>
+                                    {{--<li class="nav-item">--}}
+                                        {{--<a class="nav-link" data-toggle="tab" href="#home"--}}
+                                           {{--role="tab">Home</a>--}}
+                                    {{--</li>--}}
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#about" role="tab">About us</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" data-toggle="tab" href="#media" role="tab">Social Media
+                                        <a class="nav-link active" data-toggle="tab" href="#media" role="tab">Social
+                                            Media
                                             Info</a>
                                     </li>
 
@@ -58,31 +56,9 @@
 
                                 <div class="tab-content">
 
-                                    <div class="tab-pane active" id="attributes" name="attributes" role="tabpanel">
-                                        <div class="bs-callout bs-callout-danger">
 
-                                            <div class="card-body">
-                                                <div class="form-group">
-                                                    <label for="tax">Tax(%)</label>
-                                                    <input name="tax" type="number" class="form-control" id="tax"
-
-                                                           placeholder="Tax Rate">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="shippiing">Shipping Charges</label>
-                                                    <input type="number" class="form-control"
-                                                           id="shipping" name="shipping"
-
-                                                           placeholder="Shipping Charges">
-                                                </div>
-
-                                            </div>
-                                            <!-- /.card-body -->
-
-
-                                        </div>
-                                    </div>
                                     <div class="tab-pane fade" id="profile" role="tabpanel">
+                                        <br>
                                         <div class="form-group">
                                             <div class="row">
                                                 <label for="title" class="col-sm-2 control-label">Site Title
@@ -90,7 +66,7 @@
                                                 <div class="col-sm-10">
                                                     <input type="text" name="site_title" class="form-control"
 
-                                                           id="title">
+                                                           value="{{getConfiguration('site_title')}}" id="title">
                                                 </div>
                                             </div>
                                         </div>
@@ -117,23 +93,61 @@
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-sm-2">
-                                                        <label for="who_we_are">Our Mission</label></div>
-                                                    <div class="col-sm-8">
-            <textarea name="mission" id="mission" class="form-control"
-                      rows="5"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-sm-2">
                                                         <label for="our_vision">About</label>
                                                     </div>
                                                     <div class="col-sm-8">
-            <textarea name="about" class="form-control" id="abc"
-                      rows="5"></textarea>
+            <textarea name="about" class="form-control" id="about_sec"
+            >{{getConfiguration('about')}}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="">Current About Image</label>
+                                                <div class="container">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="fa-times-rectangle"
+                                                                         src="{{asset('images/about'.'/'.getConfiguration('about_image_1'))}}"
+                                                                         width="400px"
+                                                                         alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <label for="who_we_are">About Page Image</label></div>
+                                                    <div class="col-sm-8">
+                                                        <input type="file" class="form-control" name="about_image_1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <label for="who_we_are">Success Story</label></div>
+                                                    <div class="col-sm-8">
+            <textarea name="mission" id="mission" class="form-control"
+                      rows="5">{{getConfiguration('mission')}}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="">Current Success Story Image</label>
+                                                <div class="container">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="fa-times-rectangle"
+                                                                         src="{{asset('images/about'.'/'.getConfiguration('success_image'))}}"
+                                                                         width="400px"
+                                                                         alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <label for="who_we_are">Success Story Image</label></div>
+                                                    <div class="col-sm-8">
+                                                        <input type="file" class="form-control" name="success_image">
                                                     </div>
                                                 </div>
                                             </div>
@@ -143,7 +157,7 @@
 
                                     </div>
 
-                                    <div class="tab-pane fade" id="media" name="Media" role="tabpanel">
+                                    <div class="tab-pane active" id="media" name="Media" role="tabpanel">
                                         <br>
                                         <div class="form-group">
                                             <div class="row">
@@ -151,7 +165,7 @@
                                                 <label for="twitter_link" class="col-sm-2 control-label">Twitter
                                                     Link</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" value=""
+                                                    <input type="text" value="{{getConfiguration('twitter_link')}}"
                                                            name="twitter_link" class="form-control"
                                                            id="twitter_link">
                                                 </div>
@@ -164,7 +178,7 @@
                                                     Link</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="googleplus_link" class="form-control"
-                                                           value=""
+                                                           value="{{getConfiguration('googleplus_link')}}"
                                                            id="googleplus_link">
                                                 </div>
                                             </div>
@@ -176,7 +190,7 @@
                                                     Link</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="instagram_link" class="form-control"
-                                                           value=""
+                                                           value="{{getConfiguration('instagram_link')}}"
                                                            id="instagram_link">
                                                 </div>
                                             </div>
@@ -188,7 +202,7 @@
                                                     Link</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="facebook_link" class="form-control"
-                                                           value=""
+                                                           value="{{getConfiguration('facebook_link')}}"
                                                            id="linkedin_link">
                                                 </div>
                                             </div>
@@ -199,7 +213,7 @@
                                                     No.</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="contact_no" class="form-control"
-                                                           value=""
+                                                           value="{{getConfiguration('contact_no')}}"
                                                            id="contact_no">
                                                 </div>
                                             </div>
@@ -209,7 +223,7 @@
                                                 <label for="address" class="col-sm-2 control-label">Address</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="address" class="form-control"
-                                                           value=""
+                                                           value="{{getConfiguration('address')}}"
                                                            id="address">
                                                 </div>
                                             </div>
@@ -219,7 +233,7 @@
                                                 <label for="website" class="col-sm-2 control-label">Website</label>
                                                 <div class="col-sm-10">
                                                     <input type="text" name="website" class="form-control"
-                                                           value=""
+                                                           value="{{getConfiguration('website')}}"
                                                            id="address">
                                                 </div>
                                             </div>
@@ -229,7 +243,7 @@
                                                 <label for="email" class="col-sm-2 control-label">Email</label>
                                                 <div class="col-sm-10">
                                                     <input type="email" name="email" class="form-control"
-                                                           value=""
+                                                           value="{{getConfiguration('email')}}"
                                                            id="email">
                                                 </div>
                                             </div>
@@ -256,11 +270,15 @@
         </div>
     </form>
 @endsection
-@push('script')
+@push('scripts')
     <script>
         $(document).ready(function () {
             $("[rel='tooltip']").tooltip();
         });
     </script>
+    <script>
+        CKEDITOR.replace('about_sec');
+        CKEDITOR.replace('mission');
 
+    </script>
 @endpush
