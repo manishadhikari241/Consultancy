@@ -245,6 +245,37 @@
 
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-envelope-o"></i>
+                        <p>
+                            Courses
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('course')}}" class="nav-link">
+                                <i class="nav-icon fa fa-book"></i>
+                                <p>
+                                    Add Course
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('course-details')}}" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Course Details</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/mailbox/read-mail.html" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Read</p>
+                            </a>
+                        </li>
+                    </ul>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-book"></i>
                         <p>
                             Pages
@@ -347,6 +378,7 @@
                 </li>
             </ul>
         </nav>
+
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

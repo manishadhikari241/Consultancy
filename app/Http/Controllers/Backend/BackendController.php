@@ -9,6 +9,7 @@ class BackendController extends Controller
 {
     protected $backendPath = 'backend.';
     protected $backendPagePath = 'null';
+    protected $backendcoursePath = 'null';
     protected $backendContactPath = 'null';
 
 
@@ -16,6 +17,8 @@ class BackendController extends Controller
     {
         $this->backendPath;
         $this->backendPagePath = $this->backendPath . '/' . 'pages.';
+        $this->backendcoursePath = $this->backendPath . '/' . 'pages.'. '/' . 'course.';
+
         $this->backendContactPath = $this->backendPagePath . '/' . 'contact.';
 
     }

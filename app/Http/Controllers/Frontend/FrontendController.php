@@ -9,11 +9,13 @@ class FrontendController extends Controller
 {
     protected $frontendPath = 'Frontend.';
     protected $frontendPagePath = 'null';
+    protected $frontendcoursePath = 'null';
 
     public function __construct()
     {
         $this->frontendPath;
         $this->frontendPagePath = $this->frontendPath . '/' . 'pages.';
+        $this->frontendcoursePath = $this->frontendPath . '/' . 'pages.'. '/' . 'course.';
 
 
     }
