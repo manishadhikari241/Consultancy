@@ -76,12 +76,12 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
-                                Visas
+                                Student Visa
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="teacher.html">Student Visa</a>
-                                <a class="dropdown-item" href="teacher-single.html">Working Visa</a>
-                                <a class="dropdown-item" href="notice.html">Notice</a>
+                                <a class="dropdown-item" href="{{route('study-japan')}}">Study in Japan</a>
+                                {{--<a class="dropdown-item" href="teacher-single.html">Working Visa</a>--}}
+                                {{--<a class="dropdown-item" href="notice.html">Notice</a>--}}
 
                             </div>
                         </li>

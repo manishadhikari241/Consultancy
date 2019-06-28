@@ -1,2 +1,2 @@
 <?php
-return ['title' => 'Consultancy'];
+return ['title' => 'Shine Education'];

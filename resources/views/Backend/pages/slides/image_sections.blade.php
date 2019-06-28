@@ -115,7 +115,7 @@
                                                 <div class="container">
                                                     <div class="round-img">
                                                         <a href="#"><img class="fa-times-rectangle"
-                                                                         src="{{asset('images/frontpage'.'/'.getFrontImage('section_1'))}}"
+                                                                         src="{{asset('images/frontpage'.'/'.getFrontImage('section_4'))}}"
                                                                          width="200px"
                                                                          alt=""></a>
                                                     </div>

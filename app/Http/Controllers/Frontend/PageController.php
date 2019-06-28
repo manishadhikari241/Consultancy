@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Model\Contact;
 use App\Model\Course;
 use App\Model\frontslide;
+use App\Model\JapanDetails;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -60,4 +61,11 @@ class PageController extends FrontendController
     }
 
 
+    public function study_japan(Request $request)
+    {
+        $details = JapanDetails::all();
+        $this->data('details', $details);
+        $this->data('title', 'Study In Japan');
+        return view($this->frontendPagePath . 'student_visa.study_japan', $this->data);
+    }
 }

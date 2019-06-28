@@ -13,6 +13,8 @@
 <!-- google map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
 <script src="{{asset('js/Frontend/gmap.js')}}"></script>
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/main.js')}}"></script>
 
 <!-- Main Script -->
 <script src="{{asset('js/Frontend/script.js')}}"></script>

@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="{{asset('css/Frontend/aos.css')}}">
     <!-- venobox popup -->
     <link rel="stylesheet" href="{{asset('css/Frontend/venobox.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
 
     <!-- Main Stylesheet -->
     <link href="{{asset('css/Frontend/style.css')}}" rel="stylesheet">
@@ -44,6 +47,7 @@
 @include('Frontend.layouts.footer')
 
 @include('Frontend.layouts.scripts')
+@stack('scripts')
 
 </body>
 </html>
