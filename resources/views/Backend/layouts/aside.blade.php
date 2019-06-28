@@ -167,6 +167,28 @@
                 </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
+                        <i class="fa fa-bookmark"></i>
+                        <p>
+                            Student Visa
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('study-japan-back')}}" class="nav-link">
+                                <i class="fa fa-plane"></i>
+                                <p>
+                                    Study in Japan
+                                </p></a>
+
+                        </li>
+
+
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
                         <i class="fa fa-image"></i>
                         <p>
                             Slides

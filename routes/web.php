@@ -19,6 +19,9 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::group(['prefix' => 'Contact'], function () {
         Route::any('/', 'PageController@contact')->name('contact');
     });
+    Route::group(['prefix' => 'Student-Visa'], function () {
+        Route::any('study-japan', 'PageController@study_japan')->name('study-japan');
+    });
 
     Route::group(['prefix' => 'Courses'], function () {
         Route::get('courses', 'CourseController@courses')->name('courses');
@@ -39,6 +42,12 @@ Route::group(['namespace' => 'Backend'], function () {
     });
     Route::group(['prefix' => 'Setting'], function () {
         Route::any('setting-page', 'SettingController@setting_page')->name('setting-page');
+
+    });
+    Route::group(['prefix' => 'student_visa'], function () {
+        Route::any('study-japan-back', 'StudentVisaController@study_japan_back')->name('study-japan-back');
+        Route::any('study-japan-edit{id?}', 'StudentVisaController@study_japan_edit')->name('study-japan-edit');
+        Route::get('study-japan-delete/{id}', 'StudentVisaController@study_japan_delete')->name('study-japan-delete');
 
     });
     ROute::group(['prefix' => 'Contact'], function () {

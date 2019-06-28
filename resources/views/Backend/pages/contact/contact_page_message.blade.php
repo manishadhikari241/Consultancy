@@ -78,9 +78,7 @@
             <!-- /.col -->
         </div>
     </div>
-    <div class="modal" id="myModal">
 
-    </div>
 
 @endsection
 @push('scripts')
