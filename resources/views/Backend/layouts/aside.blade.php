@@ -267,12 +267,6 @@
                                 <p>Course Details</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/mailbox/read-mail.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Read</p>
-                            </a>
-                        </li>
                     </ul>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
