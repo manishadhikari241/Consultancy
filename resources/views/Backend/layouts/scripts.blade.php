@@ -1,8 +1,7 @@
 <!-- jQuery -->
-<script src="{{asset('js/Backend/jquery.min.js')}}"></script>
+<script src="{{asset('js/app.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+?<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
     $.widget.bridge('uibutton', $.ui.button)
 </script>
@@ -24,6 +23,7 @@
 <script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('desc');
+    CKEDITOR.replace('about');
 
 </script>
 
@@ -40,6 +40,16 @@
     toastr.warning("{{ $error }}");
     @endforeach
     @endif
+
+
+</script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable();
+    });
+
 
 
 </script>

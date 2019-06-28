@@ -11,10 +11,10 @@
                     <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="images/logo.png"
                                                                   alt="logo"></a>
                     <ul class="list-unstyled">
-                        <li class="mb-2">23621 15 Mile Rd #C104, Clinton MI, 48035, New York, USA</li>
-                        <li class="mb-2">+1 (2) 345 6789</li>
-                        <li class="mb-2">+1 (2) 345 6789</li>
-                        <li class="mb-2">contact@yourdomain.com</li>
+                        <li class="mb-2">{{getConfiguration('address')}}</li>
+                        <li class="mb-2">{{getConfiguration('contact_no')}}</li>
+                        <li class="mb-2">{{getConfiguration('website')}}</li>
+                        <li class="mb-2">{{getConfiguration('email')}}</li>
                     </ul>
                 </div>
                 <div class="col-lg-6 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
@@ -23,10 +23,10 @@
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
                     <h4 class="text-white mb-5">COMPANY</h4>
                     <ul class="list-unstyled">
-                        <li class="mb-3"><a class="text-color" href="about.html">About Us</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{route('about')}}">About Us</a></li>
                         <li class="mb-3"><a class="text-color" href="teacher.html">Our Teacher</a></li>
                         <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
-                        <li class="mb-3"><a class="text-color" href="blog.html">Blog</a></li>
+                        <li class="mb-3"><a class="text-color" href="blog.html">Testimonial</a></li>
                     </ul>
                 </div>
                 <!-- links -->
@@ -46,8 +46,9 @@
                             var CurrentYear = new Date().getFullYear()
                             document.write(CurrentYear)
                         </script>
-                        © Theme By <a href="https://themefisher.com">themefisher.com</a></p>
-                    . All Rights Reserved.
+                        © Developed By B&M Group
+                    </p>
+                    All Rights Reserved.
                 </div>
                 <div class="col-sm-5 text-sm-right text-center">
                     <ul class="list-inline">

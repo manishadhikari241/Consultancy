@@ -123,7 +123,7 @@
 <!-- /.navbar -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a target="_blank" href="{{route('index')}}" class="brand-link">
         <img src="dist/img/AdminLTELogo.png" class="brand-image img-circle elevation-3"
              style="opacity: .8">
         <span class="brand-text font-weight-light">Consultancy</span>
@@ -148,7 +148,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview menu-open">
-                    <a href="#" class="nav-link active">
+                    <a href="{{route('dashboard')}}" class="nav-link active">
                         <i class="nav-icon fa fa-dashboard"></i>
                         <p>
                             Dashboard
@@ -156,60 +156,83 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-edit"></i>
+                <li class="nav-item">
+                    <a href="{{route('course')}}" class="nav-link">
+                        <i class="nav-icon fa fa-book"></i>
                         <p>
-                            Forms
-                            <i class="fa fa-angle-left right"></i>
+                            Course
+                            <span class="badge badge-info right">2</span>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/forms/general.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>General Elements</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/forms/advanced.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Advanced Elements</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/forms/editors.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Editors</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-table"></i>
-                        <p>
-                            Tables
-                            <i class="fa fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Simple Tables</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Data Tables</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-header">EXAMPLES</li>
 
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('setting-page')}}" class="nav-link">
+                        <i class="nav-icon fa fa-calendar"></i>
+                        <p>
+                            Testimonials
+                        </p></a>
+
+                </li>
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="fa fa-image"></i>
+                        <p>
+                            Slides
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('slide-front')}}" class="nav-link">
+                                <i class="fa fa-file-image-o"></i>
+                                <p>
+                                    Frontpage Slides
+                                </p></a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('image-sections')}}" class="nav-link">
+                                <i class="fa fa-clone"></i>
+                                <p>
+                                    Manage Image Sections </p></a>
+
+                        </li>
+
+
+                    </ul>
+                </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-envelope-o"></i>
+                        <p>
+                            Contact
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('manage-contact')}}" class="nav-link">
+                                <i class="nav-icon fa fa-paragraph"></i>
+                                <p>
+                                    Manage Contact Page
+                                </p></a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('contact-message')}}" class="nav-link">
+                                <i class="nav-icon fa fa-paper-plane"></i>
+                                <p>
+                                    Message from Contact Us
+                                </p></a>
+
+                        </li>
+
+
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                     <a href="{{route('setting-page')}}" class="nav-link">
@@ -250,9 +273,7 @@
                                 <p>Read</p>
                             </a>
                         </li>
-
                     </ul>
-                </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-book"></i>
@@ -357,6 +378,7 @@
                 </li>
             </ul>
         </nav>
+
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

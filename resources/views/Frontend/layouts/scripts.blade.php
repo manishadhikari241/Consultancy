@@ -16,3 +16,19 @@
 
 <!-- Main Script -->
 <script src="{{asset('js/Frontend/script.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<script>
+    @if(\Illuminate\Support\Facades\Session::has('success'))
+    toastr.success("{{\Illuminate\Support\Facades\Session::get('success')}}");
+    @endif
+    @if(\Illuminate\Support\Facades\Session::has('error'))
+    toastr.error("{{\Illuminate\Support\Facades\Session::get('error')}}");
+    @endif
+    @if ($errors->any())
+    @foreach($errors->all() as $error)
+    toastr.warning("{{ $error }}");
+    @endforeach
+    @endif
+
+
+</script>
