@@ -210,16 +210,7 @@
                 </li>
                 <li class="nav-header">EXAMPLES</li>
 
-                <li class="nav-item">
-                    <a href="{{route('course')}}" class="nav-link">
-                        <i class="nav-icon fa fa-book"></i>
-                        <p>
-                            Course
-                            <span class="badge badge-info right">2</span>
-                        </p>
-                    </a>
 
-                </li>
                 <li class="nav-item">
                     <a href="{{route('setting-page')}}" class="nav-link">
                         <i class="nav-icon fa fa-calendar"></i>
@@ -228,25 +219,29 @@
                         </p></a>
 
                 </li>
+
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-envelope-o"></i>
                         <p>
-                            Mailbox
+                            Courses
                             <i class="fa fa-angle-left right"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/mailbox/mailbox.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Inbox</p>
+                            <a href="{{route('course')}}" class="nav-link">
+                                <i class="nav-icon fa fa-book"></i>
+                                <p>
+                                    Add Course
+                                </p>
                             </a>
+
                         </li>
                         <li class="nav-item">
-                            <a href="pages/mailbox/compose.html" class="nav-link">
+                            <a href="{{route('course-details')}}" class="nav-link">
                                 <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Compose</p>
+                                <p>Course Details</p>
                             </a>
                         </li>
                         <li class="nav-item">

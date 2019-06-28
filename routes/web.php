@@ -36,6 +36,7 @@ Route::group(['namespace' => 'Backend'], function () {
 
     Route::group(['prefix' => 'Course'], function () {
         Route::any('/courses', 'CourseController@add_course')->name('course');
+        Route::any('/course-details', 'CourseController@course_details')->name('course-details');
 
 
     });

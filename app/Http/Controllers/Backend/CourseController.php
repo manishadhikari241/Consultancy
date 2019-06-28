@@ -34,7 +34,16 @@ class CourseController extends BackendController
             }
 
         }
+
         $this->data('title', $this->setTitle('Manage Course'));
-        return view($this->backendPagePath . 'add_course',$this->data);
+        return view($this->backendcoursePath . 'add_course', $this->data);
+    }
+
+    public function course_details(Request $request)
+    {
+        $this->data('title', $this->setTitle('Course Details'));
+
+        return view($this->backendcoursePath . 'course_details', $this->data);
+
     }
 }
