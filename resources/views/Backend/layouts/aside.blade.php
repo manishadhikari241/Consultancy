@@ -156,16 +156,6 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('course')}}" class="nav-link">
-                        <i class="nav-icon fa fa-book"></i>
-                        <p>
-                            Course
-                            <span class="badge badge-info right">2</span>
-                        </p>
-                    </a>
-
-                </li>
 
                 <li class="nav-item">
                     <a href="{{route('setting-page')}}" class="nav-link">
@@ -245,7 +235,7 @@
 
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-envelope-o"></i>
+                        <i class="nav-icon fa fa-book"></i>
                         <p>
                             Courses
                             <i class="fa fa-angle-left right"></i>
