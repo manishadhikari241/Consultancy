@@ -10,8 +10,10 @@
                                 Courses</a></li>
                         <li class="list-inline-item text-white h3 font-secondary "></li>
                     </ul>
-                    <p class="text-lighten">Our courses offer a good compromise between the continuous assessment
-                        favoured by some universities and the emphasis placed on final exams by others.</p>
+                    <p class="text-lighten">This course is for those who want to acquire basic Japanese language skills in daily tasks and business
+                        environments. With this course student can be able to make basic daily conversation.</p>
+                    <p class="text-lighten">Following courses are designed to those who want to pursue their career as student in Japan or for the
+                        purposes.</p>
                 </div>
             </div>
         </div>
@@ -31,14 +33,13 @@
                         <div class="card-body">
                             <ul class="list-inline mb-2">
                                 <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>{{$value->date}}</li>
-                                {{--<li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>--}}
                             </ul>
                             <a href="{{route('courses-single')}}">
                                 <h4 class="card-title">{{$value->name}}</h4>
                             </a>
                             <p class="card-text mb-4"> {!! $value->description !!}
                               </p>
-                            <a href="{{route('courses-single')}}" class="btn btn-primary btn-sm">Apply now</a>
+                            <a href="{{route('courses-single',$value->id)}}" class="btn btn-primary btn-sm">Apply now</a>
                         </div>
                     </div>
                 </div>

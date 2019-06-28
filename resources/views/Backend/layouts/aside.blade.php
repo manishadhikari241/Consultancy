@@ -257,6 +257,12 @@
                                 <p>Course Details</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('links')}}" class="nav-link">
+                                <i class="fa fa-circle-o nav-icon"></i>
+                                <p>Links</p>
+                            </a>
+                        </li>
                     </ul>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">

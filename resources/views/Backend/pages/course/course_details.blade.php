@@ -23,7 +23,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
 
-                        <form method="POST" action="{{route('course')}}"
+                        <form method="POST" action="{{route('course-details')}}"
                               accept-charset="UTF-8" class=""
                               enctype="multipart/form-data">
                             @csrf
@@ -31,46 +31,67 @@
                             <div class="box box-default">
                                 <div class="box-body">
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
+
+                                            <div class="form-group ">
+                                                <label for="name" class="control-label">Course Begin</label>
+                                                <input class="form-control" name="begin" type="text" id="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
                                             <div class="form-group ">
                                                 <label for="name" class="control-label">Course Duration</label>
                                                 <input class="form-control" name="duration" type="text" id="name">
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
 
                                             <div class="form-group ">
-                                                <label for="caption" class="control-label">Image</label>
-                                                <input class="form-control" name="image" type="file"
-                                                       id="caption">
+                                                <label for="name" class="control-label">Course Book</label>
+                                                <input class="form-control" name="book" type="text" id="name">
                                             </div>
                                         </div>
 
-                                        <div class="col-sm-4">
+
+                                        <div class="col-sm-3">
                                             <div class="form-group ">
                                                 <label for="name" class="control-label">Course Fee</label>
-                                                <input class="form-control" name="fee" type="date" id="name">
+                                                <input class="form-control" name="fee" type="text" id="name">
                                             </div>
                                         </div>
 
                                     </div>
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
+                                            <div class="form-group ">
+                                                <label for="name" class="control-label">Select Course Type*</label>
+                                                <select type="text" name="course" class="form-control"  >
+                                                    <option selected>--Please select any course--</option>
+                                                    @foreach($course as $value)
+                                                        <option value="{{$value->id}}">{{$value->name}}</option>
+                                                    @endforeach
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-3">
+                                            <div class="form-group ">
+                                                <label for="name" class="control-label">Other Fee</label>
+                                                <input class="form-control" name="other_fee" type="text" id="name">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-6">
                                             <div class="form-group ">
                                                 <label for="name" class="control-label">About Course*</label>
                                                 <textarea id="desc"
-                                                          name="description"
-                                                          class="form-control"></textarea>                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-4">
-                                            <div class="form-group ">
-                                                <label for="name" class="control-label">Features</label>
-                                                <input class="form-control" name="fee" type="text" id="desc">
-                                            </div>
+                                                          name="about"
+                                                          class="form-control"></textarea></div>
                                         </div>
                                     </div>
-                                </div>
+
+
 
                                 <button type="submit" class="btn btn-primary">Add Course</button>
 

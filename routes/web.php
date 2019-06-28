@@ -21,8 +21,9 @@ Route::group(['namespace' => 'Frontend'], function () {
     });
 
     Route::group(['prefix' => 'Courses'], function () {
-        Route::get('courses', 'CourseController@courses')->name('courses');
-        Route::get('courses-single', 'CourseController@courses_single')->name('courses-single');
+        Route::get('courses/{id?}', 'CourseController@courses')->name('courses');
+        Route::get('/apply', 'CourseController@apply')->name('apply');
+        Route::get('courses-single/{id?}', 'CourseController@courses_single')->name('courses-single');
 
     });
 });
@@ -53,6 +54,7 @@ Route::group(['namespace' => 'Backend'], function () {
     Route::group(['prefix' => 'Course'], function () {
         Route::any('/courses', 'CourseController@add_course')->name('course');
         Route::any('/course-details', 'CourseController@course_details')->name('course-details');
+        Route::any('/links', 'CourseController@links')->name('links');
 
 
     });

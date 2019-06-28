@@ -29,6 +29,7 @@
     <!-- Main Stylesheet -->
     <link href="{{asset('css/Frontend/style.css')}}" rel="stylesheet">
 
+
     <!--Favicon-->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">

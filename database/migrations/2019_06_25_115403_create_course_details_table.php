@@ -15,17 +15,13 @@ class CreateCourseDetailsTable extends Migration
     {
         Schema::create('course_details', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('course_time');
+            $table->string('begin');
             $table->string('duration');
-            $table->string('fee');
+            $table->string('book');
+            $table->string('fee')->nullable();
+            $table->string('other_fee')->nullable();
             $table->longText('about');
-            $table->longText('features');
-            $table->longText('apply');
-            $table->string('name');
-            $table->string('designation');
-            $table->string('image')->nullable();
-            $table->integer('course_id')->unsigned();
-            $table->foreign('course_id')->references('id')->on('courses');
+            $table->string('course_type');
             $table->timestamps();
         });
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Model\Contact;
+use App\Model\Course;
 use App\Model\frontslide;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -14,6 +15,8 @@ class PageController extends FrontendController
     {
         $slides = frontslide::where('status', '=', 1)->orderby('created_at', 'desc')->get();
         $this->data('slides', $slides);
+         $course=Course::all();
+         $this->data('course',$course);
         return view($this->frontendPagePath . 'index', $this->data);
     }
 
@@ -55,4 +58,6 @@ class PageController extends FrontendController
         }
         return false;
     }
+
+
 }
