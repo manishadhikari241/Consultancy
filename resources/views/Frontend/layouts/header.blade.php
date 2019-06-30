@@ -13,13 +13,13 @@
 
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                                    href="research.html">courses</a></li>
+                                    href="{{route('about')}}">About</a></li>
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
                                     href="{{route('contact')}}">contact</a></li>
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
-                                    href="{{route('contact')}}">Gallery</a></li>
+                                    href="{{route('gallery')}}">Gallery</a></li>
                         <li class="list-inline-item"><a
                                     class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"
                                     href="{{route('login')}}"
@@ -85,13 +85,24 @@
 
                             </div>
                         </li>
-                        <li class="nav-item @@blog">
-                            <a class="nav-link" href="blog.html">Testimonial</a>
+                        <li class="nav-item dropdown view">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                Working Visa
+                            </a>
+                            {{--<div class="dropdown-menu" aria-labelledby="navbarDropdown">--}}
+                                {{--<a class="dropdown-item" href="{{route('study-japan')}}">Study in Japan</a>--}}
+                                {{--<a class="dropdown-item" href="teacher-single.html">Working Visa</a>--}}
+                                {{--<a class="dropdown-item" href="notice.html">Notice</a>--}}
+
+                            {{--</div>--}}
                         </li>
 
-                        <li class="nav-item @if($route=='contact') active @endif @@contact">
-                            <a class="nav-link" href="{{route('contact')}}">CONTACT</a>
-                        </li>
+
+                        {{--<li class="nav-item @if($route=='contact') active @endif @@contact">--}}
+                            {{--<a class="nav-link" href="{{route('contact')}}">CONTACT</a>--}}
+                        {{--</li>--}}
                     </ul>
                 </div>
             </nav>

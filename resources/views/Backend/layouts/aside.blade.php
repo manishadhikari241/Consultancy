@@ -124,9 +124,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a target="_blank" href="{{route('index')}}" class="brand-link">
-        <img src="dist/img/AdminLTELogo.png" class="brand-image img-circle elevation-3"
-             style="opacity: .8">
-        <span class="brand-text font-weight-light">Consultancy</span>
+        <img src="{{asset('images/gallery/favicon.png')}}" class="brand-image img-circle elevation-3"
+             style="background-color: white ">
+        <span class="brand-text font-weight-light">Shine Education</span>
     </a>
 
     <!-- Sidebar -->
@@ -186,7 +186,14 @@
 
                     </ul>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('gallery')}}" class="nav-link">
+                        <i class="fa fa-image"></i>
+                        <p>
+                            Gallery
+                        </p></a>
 
+                </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="fa fa-image"></i>
@@ -326,6 +333,12 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('logout')}}" class="nav-link">
+                        <i class="fa fa-backward"></i>
+                        <p>Logout</p>
+                    </a>
                 </li>
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">

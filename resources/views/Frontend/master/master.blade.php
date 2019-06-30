@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     @yield('title')
-
+    <link rel="icon" type="image/ico"
+          href="{{asset('images/gallery/favicon.png')}}"/>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

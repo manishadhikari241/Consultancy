@@ -1,4 +1,8 @@
 @extends ('Frontend.master.master')
+@section('title')
+    <title>{{ $title.' - '.getConfiguration('site_title').'-'.getConfiguration('site_description')}}</title>
+
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">

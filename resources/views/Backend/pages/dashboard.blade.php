@@ -95,119 +95,90 @@
                     <!--/.direct-chat -->
 
                     <!-- TO DO List -->
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                <i class="ion ion-clipboard mr-1"></i>
-                                To Do List
-                            </h3>
+                    <form action="{{route('dashboard')}}" method="post">
+                        @csrf
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    <i class="ion ion-clipboard mr-1"></i>
+                                    Advertisement Sections(Use Less than 500 character)
+                                </h3>
 
-                            <div class="card-tools">
-                                <ul class="pagination pagination-sm">
-                                    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
-                                </ul>
+                            </div>
+                            <!-- /.card-header -->
+
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <div class="row">
+
+                                        <label for="twitter_link" class="col-sm-2 control-label">Section 1</label>
+
+                                        <div class="col-sm-3">
+                                            <input type="text" value="{{getAdvertisement('heading_1')}}"
+                                                   name="heading_1" class="form-control"
+                                                   id="twitter_link">
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <textarea name="description_1"
+                                                      id="section_1">{{getAdvertisement('description_1')}}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+
+                                        <label for="twitter_link" class="col-sm-2 control-label">Section 2</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" value="{{getAdvertisement('heading_2')}}"
+                                                   name="heading_2" class="form-control"
+                                                   id="twitter_link">
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <textarea name="description_2"
+                                                      id="section_2">{{getAdvertisement('description_2')}}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+
+                                        <label for="twitter_link" class="col-sm-2 control-label">Section 3</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" value="{{getAdvertisement('heading_3')}}"
+                                                   name="heading_3" class="form-control"
+                                                   id="twitter_link">
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <textarea name="description_3"
+                                                      id="section_3">{{getAdvertisement('description_3')}}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+
+                                        <label for="twitter_link" class="col-sm-2 control-label">Section 4</label>
+                                        <div class="col-sm-3">
+                                            <input type="text" value="{{getAdvertisement('heading_4')}}"
+                                                   name="heading_4" class="form-control"
+                                                   id="twitter_link">
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <textarea name="description_4"
+                                                      id="section_4">{{getAdvertisement('description_4')}}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer clearfix">
+                                <button type="submit" class="btn btn-info float-right"><i class="fa fa-plus"></i> Update
+                                    Advertisements
+                                </button>
                             </div>
                         </div>
-                        <!-- /.card-header -->
-                        <div class="card-body">
-                            <ul class="todo-list">
-                                <li>
-                                    <!-- drag handle -->
-                                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                                    <!-- checkbox -->
-                                    <input type="checkbox" value="" name="">
-                                    <!-- todo text -->
-                                    <span class="text">Design a nice theme</span>
-                                    <!-- Emphasis label -->
-                                    <small class="badge badge-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
-                                    <!-- General tools such as edit or delete-->
-                                    <div class="tools">
-                                        <i class="fa fa-edit"></i>
-                                        <i class="fa fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                                    <input type="checkbox" value="" name="">
-                                    <span class="text">Make the theme responsive</span>
-                                    <small class="badge badge-info"><i class="fa fa-clock-o"></i> 4 hours</small>
-                                    <div class="tools">
-                                        <i class="fa fa-edit"></i>
-                                        <i class="fa fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                                    <input type="checkbox" value="" name="">
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-warning"><i class="fa fa-clock-o"></i> 1 day</small>
-                                    <div class="tools">
-                                        <i class="fa fa-edit"></i>
-                                        <i class="fa fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                                    <input type="checkbox" value="" name="">
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-success"><i class="fa fa-clock-o"></i> 3 days</small>
-                                    <div class="tools">
-                                        <i class="fa fa-edit"></i>
-                                        <i class="fa fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                                    <input type="checkbox" value="" name="">
-                                    <span class="text">Check your messages and notifications</span>
-                                    <small class="badge badge-primary"><i class="fa fa-clock-o"></i> 1 week</small>
-                                    <div class="tools">
-                                        <i class="fa fa-edit"></i>
-                                        <i class="fa fa-trash-o"></i>
-                                    </div>
-                                </li>
-                                <li>
-                    <span class="handle">
-                      <i class="fa fa-ellipsis-v"></i>
-                      <i class="fa fa-ellipsis-v"></i>
-                    </span>
-                                    <input type="checkbox" value="" name="">
-                                    <span class="text">Let theme shine like a star</span>
-                                    <small class="badge badge-secondary"><i class="fa fa-clock-o"></i> 1 month
-                                    </small>
-                                    <div class="tools">
-                                        <i class="fa fa-edit"></i>
-                                        <i class="fa fa-trash-o"></i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.card-body -->
-                        <div class="card-footer clearfix">
-                            <button type="button" class="btn btn-info float-right"><i class="fa fa-plus"></i> Add
-                                item
-                            </button>
-                        </div>
-                    </div>
+                    </form>
+
                     <!-- /.card -->
                 </section>
                 <!-- /.Left col -->
@@ -228,3 +199,13 @@
     </section>
     <!-- /.content -->
 @endsection
+@push('scripts')
+    <script>
+        CKEDITOR.replace('section_1');
+        CKEDITOR.replace('section_2');
+        CKEDITOR.replace('section_3');
+        CKEDITOR.replace('section_4');
+
+    </script>
+
+@endpush

@@ -2,6 +2,7 @@
 
 use App\Model\Configuration;
 use App\Model\ImageSection;
+use App\Model\Advertisement;
 
 function getConfiguration($key)
 {
@@ -17,6 +18,15 @@ function getFrontImage($key)
     $image = ImageSection::where('section', '=', $key)->first();
     if ($image != null) {
         return $image->image;
+    }
+    return null;
+}
+
+function getAdvertisement($key)
+{
+    $advertisement = Advertisement::where('section', '=', $key)->first();
+    if ($advertisement != null) {
+        return $advertisement->description;
     }
     return null;
 }
