@@ -11,6 +11,7 @@ class BackendController extends Controller
     protected $backendPagePath = 'null';
     protected $backendcoursePath = 'null';
     protected $backendContactPath = 'null';
+    protected $backendstudentPath = 'null';
 
 
     public function __construct()
@@ -20,6 +21,7 @@ class BackendController extends Controller
         $this->backendcoursePath = $this->backendPath . '/' . 'pages.'. '/' . 'course.';
 
         $this->backendContactPath = $this->backendPagePath . '/' . 'contact.';
+        $this->backendstudentPath = $this->backendPagePath . '/' . 'student.';
 
     }
 }

@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Frontend;
 use App\Model\Course;
 use App\Model\CourseDetails;
 use App\Model\Link;
+use App\Model\Student;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 
 class CourseController extends FrontendController
 {
@@ -20,6 +22,7 @@ class CourseController extends FrontendController
 
     public function courses_single($id)
     {
+        $this->data('id', $id);
         $course_name = Course::where('id', '=', $id)->pluck('name');
         $this->data('course', $course_name);
         $begin = CourseDetails::where('course_type', '=', $id)->pluck('begin');
@@ -43,9 +46,30 @@ class CourseController extends FrontendController
         return view($this->frontendcoursePath . 'course_single', $this->data);
     }
 
-    public function apply()
+    public function apply(Request $request)
     {
-        $this->data('title', 'Apply');
+        if ($request->isMethod('post'))
+        {
+            $data['course_id']=$request->id;
+            $data['name']=$request->name;
+            $data['email']=$request->email;
+            $data['contact']=$request->contact;
+            $data['address']=$request->address;
+            $insert=Student::create($data);
+            if ($insert)
+            {
+                Session::flash('success','You have successfully applied');
+                return redirect()->back();
+            }
+        }
+        if ($request->isMethod('get'))
+        {
+            $id=$request->id;
+            $this->data('id',$id);
+            $this->data('title', 'Apply');
+
+            return view($this->frontendPagePath . 'apply', $this->data);
+        }
 
         return view($this->frontendcoursePath . 'apply', $this->data);
 

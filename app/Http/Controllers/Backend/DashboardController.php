@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Model\Advertisement;
+use App\Model\Contact;
+use App\Model\Course;
+use App\Model\Gallery;
+use App\Model\Student;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -13,6 +17,14 @@ class DashboardController extends BackendController
     {
         if ($request->isMethod('get')) {
 
+            $course=Course::all();
+            $this->data('course',$course);
+            $student=Student::all();
+            $this->data('student',$student);
+            $message=Contact::all();
+            $this->data('message',$message);
+            $image=Gallery::all();
+            $this->data('image',$image);
             $this->data('title', $this->setTitle('Dashboard'));
             return view($this->backendPagePath . 'dashboard', $this->data);
         }

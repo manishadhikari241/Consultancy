@@ -7,9 +7,11 @@ use App\Model\Course;
 use App\Model\frontslide;
 use App\Model\Gallery;
 use App\Model\JapanDetails;
+use App\Model\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class PageController extends FrontendController
@@ -18,6 +20,10 @@ class PageController extends FrontendController
     {
         $slides = frontslide::where('status', '=', 1)->orderby('created_at', 'desc')->get();
         $this->data('slides', $slides);
+         $course=Course::all();
+         $this->data('course',$course);
+         $review=Testimonial::all();
+         $this->data('testimonial',$review);
         $course = Course::all();
         $this->data('course', $course);
         return view($this->frontendPagePath . 'index', $this->data);

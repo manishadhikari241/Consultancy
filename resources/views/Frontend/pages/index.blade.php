@@ -111,22 +111,25 @@
             <div class="row justify-content-center">
                 <!-- course item -->
                 @foreach($course as $value)
-                <div class="col-lg-4 col-sm-6 mb-5">
-                    <div class="card p-0 border-primary rounded-0 hover-shadow">
-                        <img class="card-img-top rounded-0" src="{{url('images/courses/'.$value->image)}}" alt="course thumb">
-                        <div class="card-body">
-                            <ul class="list-inline mb-2">
-                                <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>{{$value->date}}</li>
-                            </ul>
-                            <a href="course_single.blade.php">
-                                <h4 class="card-title">{{$value->name}}</h4>
-                            </a>
-                            <p class="card-text mb-4">{!! $value->description !!}</p>
-                            <a href="{{route('courses-single',$value->id)}}" class="btn btn-primary btn-sm">Apply now</a>
+                    <div class="col-lg-4 col-sm-6 mb-5">
+                        <div class="card p-0 border-primary rounded-0 hover-shadow">
+                            <img class="card-img-top rounded-0" src="{{url('images/courses/'.$value->image)}}"
+                                 alt="course thumb">
+                            <div class="card-body">
+                                <ul class="list-inline mb-2">
+                                    <li class="list-inline-item"><i
+                                                class="ti-calendar mr-1 text-color"></i>{{$value->date}}</li>
+                                </ul>
+                                <a href="course_single.blade.php">
+                                    <h4 class="card-title">{{$value->name}}</h4>
+                                </a>
+                                <p class="card-text mb-4">{!! $value->description !!}</p>
+                                <a href="{{route('courses-single',$value->id)}}" class="btn btn-primary btn-sm">Apply
+                                    now</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                    @endforeach
+                @endforeach
 
             </div>
             <!-- /course list -->
@@ -147,9 +150,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-4 position-relative success-video">
-                    <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-                        <i class="ti-control-play"></i>
-                    </a>
+
                 </div>
                 <div class="col-lg-6 col-sm-8">
                     <div class="bg-white p-5">
@@ -192,76 +193,55 @@
                     <div class="col-md-6">
                         <div class="owl-carousel feedback-slider">
 
+                        @foreach($testimonial as $value)
                             <!-- slider item -->
-                            <div class="feedback-slider-item">
-                                <img src="//c2.staticflickr.com/8/7310/buddyicons/24846422@N06_r.jpg"
-                                     class="img-circle" alt="Customer Feedback">
-                                <h3 class="customer-name">Lisa Redfern</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
-                                    long established fact that a reader will be distracted by the readable its
-                                    layout.</p>
-                                <span class="light-bg customer-rating" data-rating="5">
-								5
-								<i class="fa fa-star"></i>
+                                <div class="feedback-slider-item">
+                                    <img src="{{asset('images/testimonials/'.$value->image)}}" width="80px"
+                                         class="img-circle" alt="Customer Feedback">
+                                    <h3 class="customer-name">{{$value->name}}</h3>
+                                    <p>{!! $value->review !!}</p>
+                                    <span class="light-bg customer-rating" data-rating="{{$value->rating}}">
+								{{$value->rating}}
+                                        <i class="fa fa-star"></i>
 							</span>
-                            </div>
+                                </div>
+                                <!-- /slider item -->
+                        @endforeach
+                        <!-- slider item -->
                             <!-- /slider item -->
 
                             <!-- slider item -->
-                            <div class="feedback-slider-item">
-                                <img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg"
-                                     class="center-block img-circle" alt="Customer Feedback">
-                                <h3 class="customer-name">Cassi</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
-                                    long established fact that a reader will be distracted by the readable its
-                                    layout.</p>
-                                <span class="light-bg customer-rating" data-rating="4">
-								4
-								<i class="fa fa-star"></i>
-							</span>
-                            </div>
-                            <!-- /slider item -->
-
-                            <!-- slider item -->
-                            <div class="feedback-slider-item">
-                                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg"
-                                     class="center-block img-circle" alt="Customer Feedback">
-                                <h3 class="customer-name">Md Nahidul</h3>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a
-                                    long established fact that a reader will be distracted by the readable its
-                                    layout.</p>
-                                <span class="light-bg customer-rating" data-rating="5">
-								5
-								<i class="fa fa-star"></i>
-							</span>
-                            </div>
                             <!-- /slider item -->
 
                         </div><!-- /End feedback-slider -->
 
                         <!-- side thumbnail -->
                         <div class="feedback-slider-thumb hidden-xs">
-                            <div class="thumb-prev">
+                            @foreach($testimonial as $value)
+                                <div class="thumb-prev">
 							<span>
-								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg"
+								<img src="{{asset('images/testimonials/'.$value->image)}}" width="60px"
                                      alt="Customer Feedback">
 							</span>
-                                <span class="light-bg customer-rating">
-								5
-								<i class="fa fa-star"></i>
+                                    <span class="light-bg customer-rating">
+								{{$value->rating}}
+                                        <i class="fa fa-star"></i>
 							</span>
-                            </div>
+                                </div>
+                            @endforeach
 
-                            <div class="thumb-next">
+                            @foreach($testimonial as $value)
+                                <div class="thumb-next">
 							<span>
-								<img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg"
+								<img src="{{asset('images/testimonials/'.$value->image)}}" width="60px"
                                      alt="Customer Feedback">
 							</span>
-                                <span class="light-bg customer-rating">
-								4
-								<i class="fa fa-star"></i>
+                                    <span class="light-bg customer-rating">
+								{{$value->rating}}
+                                        <i class="fa fa-star"></i>
 							</span>
-                            </div>
+                                </div>
+                            @endforeach
                         </div>
                         <!-- /side thumbnail -->
                         <div class="feedback-slider-thumb hidden-xs">

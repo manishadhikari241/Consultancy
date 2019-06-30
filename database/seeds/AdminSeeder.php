@@ -11,10 +11,13 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        $data['name'] = 'Atit Lama';
-        $data['email'] = 'shine@gmail.com';
-//        $data['phone'] = '12345678';
-        $data['password'] = bcrypt('admin002');
-        $data['status'] = 1;
-        \App\Model\Admin::create($data);    }
+        {
+            $data['name'] = 'Atit Lama';
+            $data['email'] = 'shine@gmail.com';
+            $data['phone'] = '12345678';
+            $data['password'] = bcrypt('admin002');
+            $data['status'] = 1;
+            \App\Model\Admin::create($data);
+        }
+    }
 }

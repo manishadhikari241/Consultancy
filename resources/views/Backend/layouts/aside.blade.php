@@ -7,123 +7,17 @@
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="index3.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Contact</a>
-        </li>
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-        <div class="input-group input-group-sm">
-            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-            <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
-        </div>
-    </form>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-        <!-- Messages Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="fa fa-comments-o"></i>
-                <span class="badge badge-danger navbar-badge">3</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Brad Diesel
-                                <span class="float-right text-sm text-danger"><i class="fa fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">Call me whenever you can...</p>
-                            <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                John Pierce
-                                <span class="float-right text-sm text-muted"><i class="fa fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">I got your message bro</p>
-                            <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <!-- Message Start -->
-                    <div class="media">
-                        <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-                        <div class="media-body">
-                            <h3 class="dropdown-item-title">
-                                Nora Silvester
-                                <span class="float-right text-sm text-warning"><i class="fa fa-star"></i></span>
-                            </h3>
-                            <p class="text-sm">The subject goes here</p>
-                            <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
-                        </div>
-                    </div>
-                    <!-- Message End -->
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-            </div>
-        </li>
-        <!-- Notifications Dropdown Menu -->
-        <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-                <i class="fa fa-bell-o"></i>
-                <span class="badge badge-warning navbar-badge">15</span>
-            </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                <span class="dropdown-item dropdown-header">15 Notifications</span>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fa fa-envelope mr-2"></i> 4 new messages
-                    <span class="float-right text-muted text-sm">3 mins</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fa fa-users mr-2"></i> 8 friend requests
-                    <span class="float-right text-muted text-sm">12 hours</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item">
-                    <i class="fa fa-file mr-2"></i> 3 new reports
-                    <span class="float-right text-muted text-sm">2 days</span>
-                </a>
-                <div class="dropdown-divider"></div>
-                <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
-                        class="fa fa-th-large"></i></a>
-        </li>
-    </ul>
 </nav>
 <!-- /.navbar -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a target="_blank" href="{{route('index')}}" class="brand-link">
+
         <img src="{{asset('images/gallery/favicon.png')}}" class="brand-image img-circle elevation-3"
              style="background-color: white ">
         <span class="brand-text font-weight-light">Shine Education</span>
@@ -134,10 +28,10 @@
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                <img src="{{asset('images/user.png')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Admin</a>
+                <a href="{{route('dashboard')}}" class="d-block">{{\Illuminate\Support\Facades\Auth::user()->name}}</a>
             </div>
         </div>
 
@@ -147,24 +41,90 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item has-treeview menu-open">
+                <li class="nav-item ">
                     <a href="{{route('dashboard')}}" class="nav-link active">
                         <i class="nav-icon fa fa-dashboard"></i>
                         <p>
                             Dashboard
-                            <i class="right fa fa-angle-left"></i>
                         </p>
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{{route('setting-page')}}" class="nav-link">
-                        <i class="nav-icon fa fa-calendar"></i>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-book"></i>
                         <p>
-                            Testimonials
-                        </p></a>
+                            Courses
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('course')}}" class="nav-link">
+                                <i class="nav-icon fa fa-address-card-o"></i>
+                                <p>
+                                    Add Course
+                                </p>
+                            </a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('course-details')}}" class="nav-link">
+                                <i class="fa fa-bookmark"></i>
+                                <p>Course Details</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('links')}}" class="nav-link">
+                                <i class="fa fa-link"></i>
+                                <p>Links</p>
+                            </a>
+                        </li>
+                    </ul>
 
                 </li>
+
+                <li class="nav-item has-treeview">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-address-book"></i>
+                        <p>
+                            Contact
+                            <i class="fa fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{route('manage-contact')}}" class="nav-link">
+                                <i class="nav-icon fa fa-paragraph"></i>
+                                <p>
+                                    Manage Contact Page
+                                </p></a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('contact-message')}}" class="nav-link">
+                                <i class="nav-icon fa fa-paper-plane"></i>
+                                <p>
+                                    Message from Contact Us
+                                </p></a>
+
+                        </li>
+
+
+                    </ul>
+                </li>
+
+
+
+                <li class="nav-header">Applicants</li>
+                <li class="nav-item">
+                    <a href="{{route('students')}}" class="nav-link">
+                        <i class="nav-icon fa fa-user-secret"></i>
+                        <p>View Applicants</p>
+                    </a>
+                </li>
+
                 <li class="nav-item has-treeview">
                     <a href="#" class="nav-link">
                         <i class="fa fa-bookmark"></i>
@@ -186,12 +146,15 @@
 
                     </ul>
                 </li>
+                <li class="nav-header">Image Section</li>
+
                 <li class="nav-item">
-                    <a href="{{route('gallery')}}" class="nav-link">
+                    <a href="{{route('gallery-manage')}}" class="nav-link">
                         <i class="fa fa-image"></i>
                         <p>
                             Gallery
                         </p></a>
+
 
                 </li>
                 <li class="nav-item has-treeview">
@@ -222,185 +185,35 @@
 
                     </ul>
                 </li>
+                <li class="nav-header">Miscellaneous</li>
 
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-envelope-o"></i>
+                <li class="nav-item">
+                    <a href="{{route('testimonial')}}" class="nav-link">
+                        <i class="nav-icon fa fa-calendar"></i>
                         <p>
-                            Contact
-                            <i class="fa fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('manage-contact')}}" class="nav-link">
-                                <i class="nav-icon fa fa-paragraph"></i>
-                                <p>
-                                    Manage Contact Page
-                                </p></a>
+                            Testimonials
+                        </p></a>
 
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('contact-message')}}" class="nav-link">
-                                <i class="nav-icon fa fa-paper-plane"></i>
-                                <p>
-                                    Message from Contact Us
-                                </p></a>
-
-                        </li>
-
-
-                    </ul>
                 </li>
+
 
                 <li class="nav-item">
                     <a href="{{route('setting-page')}}" class="nav-link">
-                        <i class="nav-icon fa fa-calendar"></i>
+                        <i class="nav-icon fa fa-wrench"></i>
                         <p>
                             Setting
                         </p></a>
 
                 </li>
 
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-book"></i>
-                        <p>
-                            Courses
-                            <i class="fa fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('course')}}" class="nav-link">
-                                <i class="nav-icon fa fa-book"></i>
-                                <p>
-                                    Add Course
-                                </p>
-                            </a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('course-details')}}" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Course Details</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('links')}}" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Links</p>
-                            </a>
-                        </li>
-                    </ul>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-book"></i>
-                        <p>
-                            Pages
-                            <i class="fa fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/examples/invoice.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Invoice</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/profile.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Profile</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/login.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Login</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/register.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Register</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/lockscreen.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Lockscreen</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
                 <li class="nav-item">
                     <a href="{{route('logout')}}" class="nav-link">
-                        <i class="fa fa-backward"></i>
+                        <i class="fa fa-power-off"></i>
                         <p>Logout</p>
                     </a>
                 </li>
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-plus-square-o"></i>
-                        <p>
-                            Extras
-                            <i class="fa fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="pages/examples/404.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Error 404</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/500.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Error 500</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="pages/examples/blank.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Blank Page</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="starter.html" class="nav-link">
-                                <i class="fa fa-circle-o nav-icon"></i>
-                                <p>Starter Page</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-header">MISCELLANEOUS</li>
-                <li class="nav-item">
-                    <a href="https://adminlte.io/docs" class="nav-link">
-                        <i class="nav-icon fa fa-file"></i>
-                        <p>Documentation</p>
-                    </a>
-                </li>
-                <li class="nav-header">LABELS</li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-circle-o text-danger"></i>
-                        <p class="text">Important</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-circle-o text-warning"></i>
-                        <p>Warning</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-circle-o text-info"></i>
-                        <p>Informational</p>
-                    </a>
-                </li>
+
+
             </ul>
         </nav>
 
