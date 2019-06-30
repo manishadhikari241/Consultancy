@@ -1,5 +1,6 @@
 <!-- jQuery -->
 <script src="{{asset('js/app.js')}}"></script>
+{{--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
 <!-- jQuery UI 1.11.4 -->
 ?<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>

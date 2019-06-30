@@ -78,7 +78,9 @@
             <!-- /.col -->
         </div>
     </div>
+    <div class="modal" id="myModal">
 
+    </div>
 
 @endsection
 @push('scripts')
@@ -88,10 +90,10 @@
             $('.display').click(function (e) {
                 e.preventDefault();
                 var $modal = $('#myModal');
+                console.log($modal);
                 var id = $(this).attr('data-id');
                 var tempEditUrl = "{{route('reply',':id')}}";
                 tempEditUrl = tempEditUrl.replace(':id', id);
-                console.log(tempEditUrl);
                 $modal.load(tempEditUrl, function (response) {
                     $modal.modal({show: true});
                 });

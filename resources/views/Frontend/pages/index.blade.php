@@ -264,6 +264,29 @@
                             </div>
                         </div>
                         <!-- /side thumbnail -->
+                        <div class="feedback-slider-thumb hidden-xs">
+                            <div class="thumb-prev">
+							<span>
+								<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/451270/profile/profile-80.jpg"
+                                     alt="Customer Feedback">
+							</span>
+                                <span class="light-bg customer-rating">
+								5
+								<i class="fa fa-star"></i>
+							</span>
+                            </div>
+
+                            <div class="thumb-next">
+							<span>
+								<img src="https://res.cloudinary.com/hnmqik4yn/image/upload/c_fill,fl_force_strip,h_128,q_100,w_128/v1493982718/ah57hnfnwxkmsciwivve.jpg"
+                                     alt="Customer Feedback">
+							</span>
+                                <span class="light-bg customer-rating">
+								4
+								<i class="fa fa-star"></i>
+							</span>
+                            </div>
+                        </div>
 
                     </div><!-- /End col -->
                 </div><!-- /End row -->
