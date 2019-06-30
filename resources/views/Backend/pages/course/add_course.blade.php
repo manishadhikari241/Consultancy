@@ -60,7 +60,7 @@
                                                 <label for="name" class="control-label">Course Description *</label>
                                                 <textarea id="desc"
                                                           name="description"
-                                                          class="form-control"></textarea>                                            </div>
+                                                          class="form-control"></textarea></div>
                                         </div>
                                     </div>
                                 </div>
@@ -81,82 +81,65 @@
                 </div>
             </div>
 
-            {{--<div class="col-md-12">--}}
+            <div class="col-md-12">
 
 
-                {{--<div class="card">--}}
-                    {{--<div class="card-header">--}}
-                        {{--<h5 class="card-title">All Slides</h5>--}}
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title">All Courses</h5>
 
-                        {{--<div class="card-tools">--}}
+                        <div class="card-tools">
 
-                            {{--<button type="button" class="btn btn-tool" data-widget="collapse">--}}
-                                {{--<i class="fa fa-minus"></i>--}}
-                            {{--</button>--}}
-                            {{--<button type="button" class="btn btn-tool" data-widget="remove">--}}
-                                {{--<i class="fa fa-times"></i>--}}
-                            {{--</button>--}}
+                            <button type="button" class="btn btn-tool" data-widget="collapse">
+                                <i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool" data-widget="remove">
+                                <i class="fa fa-times"></i>
+                            </button>
 
-                        {{--</div>--}}
-                    {{--</div>--}}
-                    {{--<!-- /.card-header -->--}}
-                    {{--<div class="card-body">--}}
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
 
-                        {{--<!-- /.row -->--}}
-                        {{--<table id="user" class="table table-bordered table-sm">--}}
-                            {{--<thead>--}}
-                            {{--<tr>--}}
-                                {{--<th>Sn</th>--}}
-                                {{--<th><i class="fa fa-image"></i></th>--}}
-                                {{--<th>Slide Name</th>--}}
-                                {{--<th>Section</th>--}}
-                                {{--<th>Status <br>--}}
-                                    {{--<small>(Click to change status)</small>--}}
-                                {{--</th>--}}
-                                {{--<th>Action</th>--}}
-                            {{--</tr>--}}
-                            {{--</thead>--}}
-                            {{--<tbody>--}}
+                        <!-- /.row -->
+                        <table id="user" class="table table-bordered table-sm">
+                            <thead>
+                            <tr>
+                                <th>Sn</th>
+                                <th><i class="fa fa-image"></i></th>
+                                <th>Course Name</th>
+                                <th>Course Date</th>
+                                <th>Description</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
 
-                            {{--@foreach($slides as $key => $value)--}}
-                                {{--<tr>--}}
-                                    {{--<td>{{++$key}}</td>--}}
-                                    {{--<td><img src="{{asset('images/slides/'.$value->image)}}" width="80px"></td>--}}
-                                    {{--<td>{{$value->name}}</td>--}}
-                                    {{--<td>{{$value->section}}</td>--}}
-                                    {{--<td>--}}
-                                        {{--<form method="post" action="{{route('slide-status')}}">--}}
-                                            {{--<input type="hidden" name="status" value="{{$value->id}}">--}}
-                                            {{--@csrf--}}
-                                            {{--@if(($value->status)==0)--}}
-                                                {{--<button class="btn btn-danger btn btn-sm" name="inactive"><i--}}
-                                                            {{--class="fa fa-times"></i>--}}
-                                                {{--</button>--}}
-                                            {{--@else--}}
-                                                {{--<button class="btn btn-success btn btn-sm" name="active"><i--}}
-                                                            {{--class="fa fa-check"></i>--}}
-                                                {{--</button>--}}
-                                            {{--@endif--}}
+                            @foreach($course as $key => $value)
+                                <tr>
+                                    <td>{{++$key}}</td>
+                                    <td><img src="{{asset('images/courses/'.$value->image)}}" width="80px"></td>
+                                    <td>{{$value->name}}</td>
+                                    <td>{{$value->date}}</td>
+                                    <td>{!! $value->description !!}</td>
+                                    <td>
+                                    <a href="{{route('delete-course',$value->id)}}" onclick="return confirm('Confirm Delete?')"
+                                    class="btn btn-sm btn btn-danger"><i class="fa fa-trash"></i> </a>
+                                    <a href="{{route('edit-course',$value->id)}}" class="btn btn-sm btn btn-primary"><i
+                                    class="fa fa-edit"></i> </a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
+                        </table>
+                    </div>
 
-                                        {{--</form>--}}
-                                    {{--</td>--}}
-                                    {{--<td>--}}
-                                        {{--<a href="{{route('delete-slide',$value->id)}}"--}}
-                                           {{--class="btn btn-sm btn btn-danger"><i class="fa fa-trash"></i> </a>--}}
-                                        {{--<a href="{{route('edit-slide',$value->id)}}" class="btn btn-sm btn btn-primary"><i--}}
-                                                    {{--class="fa fa-edit"></i> </a>--}}
-                                    {{--</td>--}}
-                                {{--</tr>--}}
-                            {{--@endforeach--}}
-                            {{--</tbody>--}}
-                        {{--</table>--}}
-                    {{--</div>--}}
+                    <!-- ./card-body -->
 
-                    {{--<!-- ./card-body -->--}}
-
-                    {{--<!-- /.card-footer -->--}}
-                {{--</div>--}}
-            {{--</div>--}}
+                    <!-- /.card-footer -->
+                </div>
+            </div>
             <!-- /.col -->
         </div>
     </div>

@@ -25,7 +25,7 @@ Route::group(['namespace' => 'Frontend'], function () {
 
     Route::group(['prefix' => 'Courses'], function () {
         Route::get('courses/{id?}', 'CourseController@courses')->name('courses');
-        Route::get('/apply', 'CourseController@apply')->name('apply');
+        Route::any('/apply/{id?}', 'CourseController@apply')->name('apply');
         Route::get('courses-single/{id?}', 'CourseController@courses_single')->name('courses-single');
 
     });
@@ -43,6 +43,12 @@ Route::group(['namespace' => 'Backend'], function () {
     });
     Route::group(['prefix' => 'Setting'], function () {
         Route::any('setting-page', 'SettingController@setting_page')->name('setting-page');
+
+    });
+    Route::group(['prefix' => 'Student'], function () {
+        Route::any('/students', 'StudentController@view_students')->name('students');
+        Route::any('delete-student/{id}', 'StudentController@delete_student')->name('delete-student');
+
 
     });
     Route::group(['prefix' => 'student_visa'], function () {
@@ -64,8 +70,9 @@ Route::group(['namespace' => 'Backend'], function () {
         Route::any('/courses', 'CourseController@add_course')->name('course');
         Route::any('/course-details', 'CourseController@course_details')->name('course-details');
         Route::any('/links', 'CourseController@links')->name('links');
-
-
+        Route::any('/testimonial', 'CourseController@testimonial')->name('testimonial');
+        Route::any('edit-course/{id?}', 'CourseController@edit_course')->name('edit-course');
+        Route::any('delete-course/{id}', 'CourseController@delete_course')->name('delete-course');
     });
 
 

@@ -8,7 +8,7 @@
                     <ul class="list-inline custom-breadcrumb">
                         <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="courses.html">Our
                                 Courses</a></li>
-                        <li class="list-inline-item text-white h3 font-secondary nasted">Photography</li>
+                        <li class="list-inline-item text-white h3 font-secondary nasted">{{$course->first()}}</li>
                     </ul>
                     <p class="text-lighten">Our courses offer a good compromise between the continuous assessment
                         favoured by some universities and the emphasis placed on final exams by others.</p>
@@ -74,7 +74,7 @@
                     </ul>
                 </div>
                 <div class="col-xl-3 text-sm-right text-left order-sm-2 order-3 order-xl-3 col-sm-6 mb-4 mb-xl-0">
-                    <a href="{{route('apply')}}" class="btn btn-primary">Apply now</a>
+                    <a data-id="{{$id}}" class="display btn btn-primary">Apply now</a>
                 </div>
                 <!-- border -->
                 <div class="col-12 mt-4 order-4">
@@ -150,4 +150,27 @@
         </div>
     </section>
     <!-- /related course -->
+    <div class="clearfix">
+
+    </div>
+    <div class="modal" id="myModal">
+
+    </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function () {
+            $('.display').click(function (e) {
+                e.preventDefault();
+                var $modal = $('#myModal');
+                var id = $(this).attr('data-id');
+                var tempEditUrl = "{{route('apply',':id')}}";
+                tempEditUrl = tempEditUrl.replace(':id', id);
+                $modal.load(tempEditUrl, function (response) {
+                    $modal.modal({show: true});
+                });
+            });
+        });
+    </script>
+@endpush

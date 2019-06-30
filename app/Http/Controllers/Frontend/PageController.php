@@ -6,6 +6,7 @@ use App\Model\Contact;
 use App\Model\Course;
 use App\Model\frontslide;
 use App\Model\JapanDetails;
+use App\Model\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -18,6 +19,8 @@ class PageController extends FrontendController
         $this->data('slides', $slides);
          $course=Course::all();
          $this->data('course',$course);
+         $review=Testimonial::all();
+         $this->data('testimonial',$review);
         return view($this->frontendPagePath . 'index', $this->data);
     }
 
