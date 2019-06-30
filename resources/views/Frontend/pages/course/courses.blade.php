@@ -1,4 +1,8 @@
 @extends ('Frontend.master.master')
+@section('title')
+    <title>{{ $title.' - '.getConfiguration('site_title').'-'.getConfiguration('site_description')}}</title>
+
+@endsection
 @section('content')
     <!-- page title -->
     <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
@@ -6,12 +10,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
-                        <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="courses.blade.php">Our
-                                Courses</a></li>
+                        <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="#">Test
+                                Preparation Courses</a></li>
                         <li class="list-inline-item text-white h3 font-secondary "></li>
                     </ul>
-                    <p class="text-lighten">This course is for those who want to acquire basic Japanese language skills in daily tasks and business
-                        environments. With this course student can be able to make basic daily conversation.</p>
                     <p class="text-lighten">Following courses are designed to those who want to pursue their career as student in Japan or for the
                         purposes.</p>
                 </div>

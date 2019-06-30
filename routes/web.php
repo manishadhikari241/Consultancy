@@ -12,9 +12,10 @@
 */
 
 Route::group(['namespace' => 'Frontend'], function () {
-    Route::get('login', 'PageController@login')->name('login');
+    Route::any('login', 'PageController@login')->name('login');
     Route::get('/', 'PageController@index')->name('index');
     Route::get('about', 'PageController@about')->name('about');
+    Route::get('gallery', 'PageController@gallery')->name('gallery');
 
     Route::group(['prefix' => 'Contact'], function () {
         Route::any('/', 'PageController@contact')->name('contact');
@@ -30,8 +31,11 @@ Route::group(['namespace' => 'Frontend'], function () {
 
     });
 });
-Route::group(['namespace' => 'Backend'], function () {
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+Route::group(['namespace' => 'Backend','middleware'=>'auth'], function () {
+    Route::any('dashboard', 'DashboardController@index')->name('dashboard');
+    Route::any('gallery-manage', 'SlideController@gallery')->name('gallery-manage');
+    Route::get('gallery-delete/{id}', 'SlideController@gallery_delete')->name('gallery-delete');
+    Route::get('logout', 'DashboardController@logout')->name('logout');
 
     Route::group(['prefix' => 'slides'], function () {
         Route::any('slide-front', 'SlideController@slide_front')->name('slide-front');

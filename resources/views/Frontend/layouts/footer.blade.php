@@ -25,9 +25,8 @@
                     <h4 class="text-white mb-5">COMPANY</h4>
                     <ul class="list-unstyled">
                         <li class="mb-3"><a class="text-color" href="{{route('about')}}">About Us</a></li>
-                        <li class="mb-3"><a class="text-color" href="teacher.html">Our Teacher</a></li>
-                        <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
-                        <li class="mb-3"><a class="text-color" href="blog.html">Testimonial</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{route('gallery')}}">Gallery</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{route('contact')}}">Contact</a></li>
                     </ul>
                 </div>
                 <!-- links -->

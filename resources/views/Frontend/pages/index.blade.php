@@ -47,35 +47,23 @@
                     <div class="row feature-blocks bg-gray justify-content-between">
                         <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
                             <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Scholorship News</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut
-                                labore
-                                et dolore magna aliqua. Ut enim ad</p>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">{{getAdvertisement('heading_1')}}</h3>
+                            <p>{!! getAdvertisement('description_1') !!}</p>
                         </div>
                         <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
                             <i class="ti-blackboard mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Notice Board</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut
-                                labore
-                                et dolore magna aliqua. Ut enim ad</p>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">{{getAdvertisement('heading_2')}}</h3>
+                            <p>{!! getAdvertisement('description_2') !!}</p>
                         </div>
                         <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
                             <i class="ti-agenda mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Achievements</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut
-                                labore
-                                et dolore magna aliqua. Ut enim ad</p>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">{{getAdvertisement('heading_3')}}</h3>
+                            <p>{!! getAdvertisement('description_3') !!}</p>
                         </div>
                         <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
                             <i class="ti-write mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
-                            <h3 class="mb-xl-4 mb-lg-3 mb-4">Admission Now</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut
-                                labore
-                                et dolore magna aliqua. Ut enim ad</p>
+                            <h3 class="mb-xl-4 mb-lg-3 mb-4">{{getAdvertisement('heading_4')}}</h3>
+                            <p>{!! getAdvertisement('description_4') !!}</p>
                         </div>
                     </div>
                 </div>
@@ -162,9 +150,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-4 position-relative success-video">
-                    <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-                        <i class="ti-control-play"></i>
-                    </a>
+
                 </div>
                 <div class="col-lg-6 col-sm-8">
                     <div class="bg-white p-5">

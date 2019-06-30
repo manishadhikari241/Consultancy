@@ -6,7 +6,7 @@
 
         <div class="card">
             <div class="card-header">
-                <h5 class="card-title">All Students</h5>
+                <h5 class="card-title">Applicants</h5>
 
                 <div class="card-tools">
 
@@ -46,7 +46,7 @@
                             <td>{{$value->contact}}</td>
                             <td>{{$value->address}}</td>
                             <td>
-                                <a href="{{route('delete-student',$value->id)}}"
+                                <a href="{{route('delete-student',$value->id)}}" onclick="return confirm('Confirm Delete?')"
                                    class="btn btn-sm btn btn-danger"><i class="fa fa-trash"></i> </a>
                             </td>
                         </tr>

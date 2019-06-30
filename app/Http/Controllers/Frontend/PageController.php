@@ -5,10 +5,13 @@ namespace App\Http\Controllers\Frontend;
 use App\Model\Contact;
 use App\Model\Course;
 use App\Model\frontslide;
+use App\Model\Gallery;
 use App\Model\JapanDetails;
 use App\Model\Testimonial;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
 class PageController extends FrontendController
@@ -21,12 +24,44 @@ class PageController extends FrontendController
          $this->data('course',$course);
          $review=Testimonial::all();
          $this->data('testimonial',$review);
+        $course = Course::all();
+        $this->data('course', $course);
         return view($this->frontendPagePath . 'index', $this->data);
     }
 
-    public function login()
+    public function login(Request $request)
     {
-        return view($this->frontendPagePath . 'login');
+        if ($request->isMethod('get')) {
+
+            $this->data('title', 'Login');
+            return view($this->frontendPagePath . 'login', $this->data);
+        }
+        if ($request->isMethod('post')) {
+
+            $request->validate([
+                'email' => 'required',
+                'password' => 'required'
+            ]);
+
+
+            $email = $request->email;
+            $password = $request->password;
+
+            $remember = isset($request->remember_me) ? true : false;
+
+            if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
+
+                return redirect()->intended(route('dashboard'))->with('success', 'You are logged in');
+
+
+            } else {
+                Session::flash('error', 'Please enter valid credentials');
+                return redirect()->back();
+            }
+
+        }
+
+        return false;
     }
 
     public function about()
@@ -61,6 +96,14 @@ class PageController extends FrontendController
             }
         }
         return false;
+    }
+
+    public function gallery(Request $request)
+    {
+        $gallery = Gallery::all();
+        $this->data('gallery', $gallery);
+        $this->data('title', 'Gallery');
+        return view($this->frontendPagePath . 'gallery', $this->data);
     }
 
 

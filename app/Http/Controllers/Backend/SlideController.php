@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Model\frontslide;
+use App\Model\Gallery;
 use App\Model\ImageSection;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -146,7 +147,6 @@ class SlideController extends BackendController
             }
 
 
-
             return redirect()->back()->with('success', 'Image Sections Updated');
         }
         return false;
@@ -165,4 +165,65 @@ class SlideController extends BackendController
         }
         return true;
     }
+
+    public function gallery(Request $request)
+    {
+        if ($request->isMethod('get')) {
+            $image = Gallery::all();
+
+            $this->data('images', $image);
+            $this->data('title', $this->setTitle('Gallery'));
+            return view($this->backendPagePath . 'gallery', $this->data);
+        }
+        if ($request->isMethod('post')) {
+            $count = count($request->image_upload);
+
+            if ($request->hasfile('image_upload')) {
+
+                foreach ($request->file('image_upload') as $image) {
+                    $name = time() . '.' . $image->getClientOriginalName();
+                    $image->move(public_path() . '/images/gallery/', $name);
+                    $data[] = $name;
+                }
+            }
+            foreach ($data as $value) {
+                $save['gallery'] = $value;
+                $create = Gallery::create($save);
+            }
+//            $form = new Gallery();
+//            $form->filename = json_encode($data);
+//
+//
+//            $form->save();
+
+
+            return redirect()->back()->with('success', 'Images Uploaded');
+
+
+        }
+        return false;
+    }
+
+    public function gallery_delete(Request $request)
+    {
+        $id = $request->id;
+        $this->gallery_file($id);
+        $finddata = Gallery::findorfail($id)->delete();
+        if ($finddata) {
+            return redirect()->back()->with('success', 'Images Deleted');
+        }
+        return true;
+    }
+
+    public function gallery_file($id)
+    {
+        $findData = Gallery::where('id', '=', $id)->first();
+        $fileName = $findData->gallery;
+        $deletePath = public_path('images/gallery/' . $fileName);
+        if (file_exists($deletePath) && is_file($deletePath)) {
+            unlink($deletePath);
+        }
+        return true;
+    }
+
 }

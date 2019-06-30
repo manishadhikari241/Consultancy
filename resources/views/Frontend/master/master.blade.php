@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     @yield('title')
-
+    <link rel="icon" type="image/ico"
+          href="{{asset('images/gallery/favicon.png')}}"/>
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="{{asset('css/Frontend/aos.css')}}">
     <!-- venobox popup -->
     <link rel="stylesheet" href="{{asset('css/Frontend/venobox.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
 

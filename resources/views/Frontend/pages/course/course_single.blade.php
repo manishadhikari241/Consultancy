@@ -6,12 +6,11 @@
             <div class="row">
                 <div class="col-md-8">
                     <ul class="list-inline custom-breadcrumb">
-                        <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="courses.html">Our
+                        <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="#">Our
                                 Courses</a></li>
-                        <li class="list-inline-item text-white h3 font-secondary nasted">{{$course->first()}}</li>
                     </ul>
-                    <p class="text-lighten">Our courses offer a good compromise between the continuous assessment
-                        favoured by some universities and the emphasis placed on final exams by others.</p>
+                    <p class="text-lighten">This course is for those who want to acquire basic Japanese language skills in daily tasks and business
+                        environments. With this course student can be able to make basic daily conversation.</p>
                 </div>
             </div>
         </div>

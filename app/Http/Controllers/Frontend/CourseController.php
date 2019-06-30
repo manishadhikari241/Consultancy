@@ -15,6 +15,7 @@ class CourseController extends FrontendController
     public function courses()
     {
         $course = Course::all();
+        $this->data('title', 'Our Courses');
         $this->data('course', $course);
         return view($this->frontendcoursePath . 'courses', $this->data);
     }
@@ -70,6 +71,7 @@ class CourseController extends FrontendController
             return view($this->frontendPagePath . 'apply', $this->data);
         }
 
+        return view($this->frontendcoursePath . 'apply', $this->data);
 
     }
 
