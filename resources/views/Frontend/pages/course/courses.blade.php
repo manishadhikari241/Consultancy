@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <!-- page title -->
-    <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+    <section class="page-title-section overlay" data-background="{{asset('images/courses/course.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -21,9 +21,18 @@
         </div>
     </section>
     <!-- /page title -->
+<br>
+<br>
+    <div class="col-12">
+        <div class="d-flex align-items-center ">
+            <h2 class="mb-0 text-nowrap mr-3">All Courses</h2>
+            <div class="border-top w-100 border-primary d-none d-sm-block"></div>
 
+        </div>
+    </div>
     <!-- courses -->
     <section class="section">
+
         <div class="container">
             <!-- course list -->
             <div class="row justify-content-center">

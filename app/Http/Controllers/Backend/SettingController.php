@@ -18,7 +18,7 @@ class SettingController extends BackendController
         if ($request->isMethod('post')) {
 
             $inputs = $request->only(
-                'mission', 'about', 'twitter_link', 'googleplus_link', 'instagram_link', 'facebook_link', 'contact_no', 'address', 'website', 'email', 'site_title', 'site_description'
+                'mission', 'about', 'twitter_link', 'googleplus_link', 'instagram_link', 'facebook_link', 'contact_no', 'address', 'website', 'email', 'site_title', 'site_description','chairman','chairman_name'
             );
             if ($request->hasfile('about_image_1')) {
                 $this->delete_file('about_image_1');
@@ -43,6 +43,18 @@ class SettingController extends BackendController
                 })->save($destinationPath . '/' . $ext);
                 $data = $ext;
                 $successimage = Configuration::updateorcreate(['configuration_key' => 'success_image'], ['configuration_value' => $data]);
+            }
+            if ($request->hasfile('chairman_image')) {
+                $this->delete_file('chairman_image');
+                $image = $request->file('chairman_image');
+                $ext = time() . '.' . $image->getClientOriginalExtension();
+                $destinationPath = public_path('/images/about/');
+                $makefile = Image::make($image);
+                $save = $makefile->resize(500, '500', function ($ar) {
+                    $ar->aspectRatio();
+                })->save($destinationPath . '/' . $ext);
+                $data = $ext;
+                $aboutimage = Configuration::updateorcreate(['configuration_key' => 'chairman_image'], ['configuration_value' => $data]);
             }
 
             foreach ($inputs as $key => $value) {

@@ -176,6 +176,9 @@ class SlideController extends BackendController
             return view($this->backendPagePath . 'gallery', $this->data);
         }
         if ($request->isMethod('post')) {
+            $request->validate([
+                'image_upload' => 'required',
+            ]);
             $count = count($request->image_upload);
 
             if ($request->hasfile('image_upload')) {

@@ -25,6 +25,8 @@ class CourseController extends FrontendController
         $this->data('id', $id);
         $course_name = Course::where('id', '=', $id)->pluck('name');
         $this->data('course', $course_name);
+        $image = Course::where('id', '=', $id)->pluck('image')->first();
+        $this->data('image', $image);
         $begin = CourseDetails::where('course_type', '=', $id)->pluck('begin');
         $this->data('begin', $begin);
         $duration = CourseDetails::where('course_type', '=', $id)->pluck('duration');

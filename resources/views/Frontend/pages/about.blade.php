@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <!-- page title -->
-    <section class="page-title-section overlay" data-background="images/first.jpg">
+    <section class="page-title-section overlay" data-background="images/about/about.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -38,40 +38,6 @@
     <!-- /about -->
 
     <!-- funfacts -->
-    <section class="section-sm bg-primary">
-        <div class="container">
-            <div class="row">
-                <!-- funfacts item -->
-                <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-                    <div class="text-center">
-                        <h2 class="count text-white" data-count="60">0</h2>
-                        <h5 class="text-white">TEACHERS</h5>
-                    </div>
-                </div>
-                <!-- funfacts item -->
-                <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-                    <div class="text-center">
-                        <h2 class="count text-white" data-count="50">0</h2>
-                        <h5 class="text-white">COURSES</h5>
-                    </div>
-                </div>
-                <!-- funfacts item -->
-                <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-                    <div class="text-center">
-                        <h2 class="count text-white" data-count="1000">0</h2>
-                        <h5 class="text-white">STUDENTS</h5>
-                    </div>
-                </div>
-                <!-- funfacts item -->
-                <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-                    <div class="text-center">
-                        <h2 class="count text-white" data-count="3737">0</h2>
-                        <h5 class="text-white">SATISFIED CLIENT</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- /funfacts -->
 
     <!-- success story -->
@@ -79,13 +45,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-sm-4 position-relative success-video">
-                    <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-                        <i class="ti-control-play"></i>
-                    </a>
+
                 </div>
                 <div class="col-lg-6 col-sm-8">
                     <div class="bg-white p-5">
-                        <h2 class="section-title">Success Stories</h2>
+                        <h2 class="section-title">Our Services</h2>
                         <p>
                             {!! getConfiguration('mission') !!}
                         </p>
@@ -94,87 +58,27 @@
             </div>
         </div>
     </section>
-    <!-- /success story -->
 
-    <!-- teachers -->
-    <section class="section">
+    <section class="section-sm">
+
+        <div class="col-12">
+            <div class="d-flex align-items-center ">
+                <h2 class="mb-0 text-nowrap mr-3">Message From Chairman</h2>
+                <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+
+            </div>
+        </div>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h2 class="section-title">Our Teachers</h2>
+            <div class="row">
+                <div class="col-md-5 mb-5">
+                    <img class="img-fluid w-100" src="{{asset('images/about/'.getConfiguration('chairman_image'))}}" alt="teacher"
+                         style="padding-right: 100px">
                 </div>
-                <!-- teacher -->
-                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                    <div class="card border-0 rounded-0 hover-shadow">
-                        <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher">
-                        <div class="card-body">
-                            <a href="teacher-single.html">
-                                <h4 class="card-title">Jacke Masito</h4>
-                            </a>
-                            <div class="d-flex justify-content-between">
-                                <span>Teacher</span>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-twitter-alt"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-google"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-6 mb-5">
+                    <h3>{{getConfiguration('chairman_name')}}</h3>
+                    <p>{!! getConfiguration('chairman') !!}</p>
                 </div>
-                <!-- teacher -->
-                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                    <div class="card border-0 rounded-0 hover-shadow">
-                        <img class="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher">
-                        <div class="card-body">
-                            <a href="teacher-single.html">
-                                <h4 class="card-title">Clark Malik</h4>
-                            </a>
-                            <div class="d-flex justify-content-between">
-                                <span>Teacher</span>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-twitter-alt"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-google"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- teacher -->
-                <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-                    <div class="card border-0 rounded-0 hover-shadow">
-                        <img class="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher">
-                        <div class="card-body">
-                            <a href="teacher-single.html">
-                                <h4 class="card-title">John Doe</h4>
-                            </a>
-                            <div class="d-flex justify-content-between">
-                                <span>Teacher</span>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-facebook"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-twitter-alt"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-google"></i></a></li>
-                                    <li class="list-inline-item"><a class="text-color" href="#"><i
-                                                    class="ti-linkedin"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>

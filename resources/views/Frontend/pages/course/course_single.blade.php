@@ -1,7 +1,7 @@
 @extends ('Frontend.master.master')
 @section('content')
     <!-- page title -->
-    <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+    <section class="page-title-section overlay" data-background="{{asset('images/courses/book.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -16,14 +16,13 @@
         </div>
     </section>
     <!-- /page title -->
-
     <!-- section -->
     <section class="section-sm">
         <div class="container">
             <div class="row">
-                <div class="col-12 mb-4">
+                <div class="col-2 mb-4">
                     <!-- course thumb -->
-                    <img src="images/courses/course-single.jpg" class="img-fluid w-100">
+                    <img class="card-img-top rounded-0" src="{{url('images/courses/'.$image)}}" alt="course thumb">
                 </div>
             </div>
             <!-- course info -->
@@ -129,9 +128,9 @@
                 <!-- course item -->
                 @foreach($related as $value)
 
-                    <div class="col-lg-4 col-sm-6 mb-5">
+                    <div class="col-lg-3 col-sm-6 mb-5">
                         <div class="card p-0 border-primary rounded-0 hover-shadow">
-                            <img class="card-img-top rounded-0" src="images/courses/course-1.jpg" alt="course thumb">
+                            <img class="card-img-top rounded-0" src="{{url('images/courses/'.$value->image)}}" width="20px" height="200px" alt="course thumb">
                             <div class="card-body">
                                 <a href="course_single.blade.php">
                                     <h4 class="card-title">{{$value->name}}</h4>

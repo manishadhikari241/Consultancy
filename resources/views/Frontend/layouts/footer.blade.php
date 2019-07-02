@@ -22,9 +22,10 @@
                 </div>
                 <!-- company -->
                 <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
-                    <h4 class="text-white mb-5">COMPANY</h4>
+                    <h4 class="text-white mb-5">INFORMATION</h4>
                     <ul class="list-unstyled">
                         <li class="mb-3"><a class="text-color" href="{{route('about')}}">About Us</a></li>
+                        <li class="mb-3"><a class="text-color" href="{{route('courses')}}">Courses</a></li>
                         <li class="mb-3"><a class="text-color" href="{{route('gallery')}}">Gallery</a></li>
                         <li class="mb-3"><a class="text-color" href="{{route('contact')}}">Contact</a></li>
                     </ul>

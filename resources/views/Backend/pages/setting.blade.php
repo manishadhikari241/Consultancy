@@ -36,8 +36,8 @@
                                             Setting</a>
                                     </li>
                                     {{--<li class="nav-item">--}}
-                                        {{--<a class="nav-link" data-toggle="tab" href="#home"--}}
-                                           {{--role="tab">Home</a>--}}
+                                    {{--<a class="nav-link" data-toggle="tab" href="#home"--}}
+                                    {{--role="tab">Home</a>--}}
                                     {{--</li>--}}
                                     <li class="nav-item">
                                         <a class="nav-link" data-toggle="tab" href="#about" role="tab">About us</a>
@@ -124,7 +124,7 @@
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-sm-2">
-                                                        <label for="who_we_are">Success Story</label></div>
+                                                        <label for="who_we_are">Our Services</label></div>
                                                     <div class="col-sm-8">
             <textarea name="mission" id="mission" class="form-control"
                       rows="5">{{getConfiguration('mission')}}</textarea>
@@ -132,7 +132,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="">Current Success Story Image</label>
+                                                <label class="">Current Our Services Image</label>
                                                 <div class="container">
                                                     <div class="round-img">
                                                         <a href="#"><img class="fa-times-rectangle"
@@ -145,9 +145,50 @@
                                             <div class="form-group">
                                                 <div class="row">
                                                     <div class="col-sm-2">
-                                                        <label for="who_we_are">Success Story Image</label></div>
+                                                        <label for="who_we_are">Our Services Image</label></div>
                                                     <div class="col-sm-8">
                                                         <input type="file" class="form-control" name="success_image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <label for="who_we_are">Chairman Name</label></div>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" value="{{getConfiguration('chairman_name')}}"
+                                                               class="form-control" name="chairman_name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <label for="who_we_are">Message From Chairman</label></div>
+                                                    <div class="col-sm-8">
+            <textarea name="chairman" id="chairman" class="form-control"
+                      rows="5">{{getConfiguration('chairman')}}</textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="">Current Chairman Image</label>
+                                                <div class="container">
+                                                    <div class="round-img">
+                                                        <a href="#"><img class="fa-times-rectangle"
+                                                                         src="{{asset('images/about'.'/'.getConfiguration('chairman_image'))}}"
+                                                                         width="400px"
+                                                                         alt=""></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <label for="who_we_are">Update Chairman Image</label></div>
+                                                    <div class="col-sm-8">
+                                                        <input type="file" class="form-control" name="chairman_image">
                                                     </div>
                                                 </div>
                                             </div>
@@ -279,6 +320,7 @@
     <script>
         CKEDITOR.replace('about_sec');
         CKEDITOR.replace('mission');
+        CKEDITOR.replace('chairman');
 
     </script>
 @endpush

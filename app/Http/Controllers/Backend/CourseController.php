@@ -157,6 +157,11 @@ class CourseController extends BackendController
         }
         if ($request->isMethod('post')) {
             $id = $request->id;
+            $request->validate([
+                'name' => 'required',
+                'date' => 'required',
+                'description' => 'required'
+            ]);
             if ($request->hasFile('image')) {
                 $this->delete_file($id);
                 $image = $request->file('image');
@@ -165,20 +170,18 @@ class CourseController extends BackendController
                 $image->move($destinationPath, $name);
                 $data['image'] = $name;
             }
-            $update = Course::where('id', '=', $id)->update([
-                'name' => $request->name,
-                'date' => $request->date,
-                'description' => $request->description,
-                'image' => $name,
-            ]);
+            $data['name'] = $request->name;
+            $data['date'] = $request->date;
+            $data['description'] = $request->description;
+
+            $create = Course::findorfail($id);
 
 
-            if ($update) {
+            if ($create->update($data)) {
                 return redirect()->back()->with('success', 'Details Updated');
             }
         }
     }
-
     public function delete_file($id)
     {
         $findData = Course::findorfail($id);

@@ -1,5 +1,7 @@
 <!-- Main Sidebar Container -->
-
+@php
+    $route = \Illuminate\Support\Facades\Route::currentRouteName();
+@endphp
 <!-- Navbar -->
 <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
     <!-- Left navbar links -->
@@ -42,7 +44,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item ">
-                    <a href="{{route('dashboard')}}" class="nav-link active">
+                    <a href="{{route('dashboard')}}" class="nav-link @if($route=='dashboard') active @endif">
                         <i class="nav-icon fa fa-dashboard"></i>
                         <p>
                             Dashboard
@@ -51,17 +53,17 @@
                 </li>
 
 
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-treeview {{$route=='course'|$route=='course-details'|$route=='links'?'menu-open':null}}">
+                    <a href="#" class="nav-link @if($route=='course'|$route=='course-details'|$route=='links') active @endif ">
                         <i class="nav-icon fa fa-book"></i>
                         <p>
                             Courses
                             <i class="fa fa-angle-left right"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{route('course')}}" class="nav-link">
+                    <ul class="nav nav-treeview {{$route=='course'|$route=='course-details'?'menu-open':null}}">
+                        <li class="nav-item {{$route=='course'|$route=='course-details'|$route=='links'?'active':null}}">
+                            <a href="{{route('course')}}" class="nav-link @if($route== 'course' ) active @endif">
                                 <i class="nav-icon fa fa-address-card-o"></i>
                                 <p>
                                     Add Course
@@ -69,14 +71,15 @@
                             </a>
 
                         </li>
-                        <li class="nav-item">
-                            <a href="{{route('course-details')}}" class="nav-link">
+                        <li class="nav-item active">
+                            <a href="{{route('course-details')}}"
+                               class="nav-link {{$route=='course-details'?'active':null}}">
                                 <i class="fa fa-bookmark"></i>
                                 <p>Course Details</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('links')}}" class="nav-link">
+                            <a href="{{route('links')}}" class="nav-link {{$route=='links'?'active':null}}">
                                 <i class="fa fa-link"></i>
                                 <p>Links</p>
                             </a>
@@ -85,8 +88,8 @@
 
                 </li>
 
-                <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                <li class="nav-item has-treeview {{$route=='manage-contact'|$route=='contact-message'?'menu-open':null}} ">
+                    <a href="#" class="nav-link @if($route=='manage-contact'|$route=='contact-message') active @endif">
                         <i class="nav-icon fa fa-address-book"></i>
                         <p>
                             Contact
@@ -95,7 +98,8 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{route('manage-contact')}}" class="nav-link">
+                            <a href="{{route('manage-contact')}}"
+                               class="nav-link {{$route=='manage-contact'?'active':null}}">
                                 <i class="nav-icon fa fa-paragraph"></i>
                                 <p>
                                     Manage Contact Page
@@ -103,7 +107,8 @@
 
                         </li>
                         <li class="nav-item">
-                            <a href="{{route('contact-message')}}" class="nav-link">
+                            <a href="{{route('contact-message')}}"
+                               class="nav-link {{$route=='contact-message'?'active':null}}">
                                 <i class="nav-icon fa fa-paper-plane"></i>
                                 <p>
                                     Message from Contact Us
@@ -114,7 +119,6 @@
 
                     </ul>
                 </li>
-
 
 
                 <li class="nav-header">Applicants</li>
